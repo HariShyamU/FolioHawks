@@ -226,22 +226,11 @@ color: white;
   background-color: black;
   text-align: center;
   color: white;
+  -webkit-clip-path: polygon(0 0, 68% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 68% 0, 100% 100%, 0% 100%);
   /* animation-name: pullup;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
-}
-
-.section1::after {
-  position:absolute;
-  content: " ";
-  display:block;
-  left:0;
-  bottom:-20px;
-  width:100%;
-  border-style: solid;
-  border-width: 0 100vw 20px 0;
-  border-color: transparent rgba(0,0,0,0.4) transparent transparent;
-
 }
 
 .section2 {
@@ -250,6 +239,8 @@ color: white;
   text-align: center;
   background-color: #C0C0C0	;
   height: 100vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
   /* animation-name: dropdown;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -262,6 +253,8 @@ color: white;
   background-color: black;
   color: white;
   text-align: center;
+  -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
   /* animation-name: pullup;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -273,6 +266,8 @@ color: white;
   height: 100vh;
   text-align: center;
   background-color: #C0C0C0	;
+  -webkit-clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
   /* animation-name: dropdown;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
