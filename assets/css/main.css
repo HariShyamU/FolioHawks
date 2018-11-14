@@ -231,6 +231,19 @@ color: white;
   animation-timing-function: ease-out; */
 }
 
+.section1::after {
+  position:absolute;
+  content: " ";
+  display:block;
+  left:0;
+  bottom:-20px;
+  width:100%;
+  border-style: solid;
+  border-width: 0 100vw 20px 0;
+  border-color: transparent rgba(0,0,0,0.4) transparent transparent;
+
+}
+
 .section2 {
   float: right;
   width: calc(50vw - ((100vw - 100%)/2));
