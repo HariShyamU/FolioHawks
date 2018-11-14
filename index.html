@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+        <a style="padding:10px 0px 0px 5px; margin-bottom: 30vh;" href="Home"> <img src="assets/images/logo.svg" alt="">  <div style="padding-left:22px; font-size:20px;" id="HiddenText"><p>Folio Hawks</p></div> </a>
+        <a href="Portfolio"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
+        <a href="Services"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
+        <a href="Contact"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
+    </nav>
+    <div class="owl-carousel">
+      <div class="slide1">  </div>
+      <div class="slide2">  </div>
+      <div class="slide3">  </div>
+      <div class="slide4">  </div>
+      <div class="slide5">  </div>
+    </div>
+    <div class="HomeContent">
+      <h3></h3>
+      <p></p>
+      <div class="buttons">
+        <button style="margin-right:2vw;" type="button" name="button">SERVICE 1</button>
+        <button style="margin-right:2vw;" type="button" name="button">SERVICE 2</button>
+        <button style="margin-right:0;;" type="button" name="button">SERVICE 3</button>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="service">
+        <div class="section1" data-aos="slide-right">
+          <div class="secontent" data-aos-delay="1000"	data-aos="fade-down">
+            <p>test</p>
+          </div>
+        </div>
+        <div class="section2" data-aos="slide-left">
+          <div class="secontent" data-aos-delay="1000" data-aos="fade-up">
+            <p>test</p>
+          </div>
+        </div>
+      </div>
+      <div class="service">
+        <div class="insection1" data-aos="slide-left">
+          <div class="secontent" data-aos-delay="1000"	data-aos="fade-down">
+            <p>test</p>
+          </div>
+        </div>
+        <div class="insection2" data-aos="slide-right">
+          <div class="secontent" data-aos-delay="1000" data-aos="fade-up">
+            <p>test</p>
+          </div>
+        </div>
+      </div>
+      <div class="service">
+        <div class="section1" data-aos="slide-right">
+          <div class="secontent" data-aos-delay="1000"	data-aos="fade-down">
+            <p>test</p>
+          </div>
+        </div>
+        <div class="section2" data-aos="slide-left">
+          <div class="secontent" data-aos-delay="1000" data-aos="fade-up">
+            <p>test</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:1,
+            loop:true,
+            autoplay:true,
+            autoplayTimeout:6000,
+            autoplaySpeed: 2000,
+            autoplayHoverPause:true,
+            dots: false
+        });
+      });
+
+      AOS.init({
+        duration: 1200,
+      })
+
+    </script>
+  </body>
+</html>
