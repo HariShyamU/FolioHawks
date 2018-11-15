@@ -17,7 +17,7 @@
         <a href="Services"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
         <a href="Contact"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
     </nav>
-    <div class="owl-carousel">
+    <div class="Hbackgrnd owl-carousel">
       <div class="slide1">  </div>
       <div class="slide2">  </div>
       <div class="slide3">  </div>
@@ -37,36 +37,60 @@
       <div class="service">
         <div class="section1" data-aos="slide-right">
           <div class="secontent1" data-aos-delay="1000"	data-aos="fade-down">
-            <p>test</p>
+            <div class="pcontent">
+              <h1>here goes text</h1>
+            </div>
+            <div class="pcarouselbot owl-carousel">
+              <div class="pslide"> <img src="assets/images/page3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/page3-2.jpg" > </div>
+            </div>
           </div>
         </div>
         <div class="section2" data-aos="slide-left">
           <div class="secontent2" data-aos-delay="1000" data-aos="fade-up">
-            <p>test</p>
+            <div class="pcarousel owl-carousel">
+              <div class="pslide"> <img src="assets/images/pagew3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
+            </div>
+            <div class="pcontentbot">
+              <h1>here goes text</h1>
+            </div>
           </div>
         </div>
       </div>
       <div class="service">
         <div class="insection1" data-aos="slide-left">
           <div class="insecontent1" data-aos-delay="1000"	data-aos="fade-down">
-            <p>test</p>
+            <div class="pcarouselbot owl-carousel">
+              <div class="pslide"> <img src="assets/images/page3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/page3-2.jpg" > </div>
+            </div>
           </div>
         </div>
         <div class="insection2" data-aos="slide-right">
           <div class="insecontent2" data-aos-delay="1000" data-aos="fade-up">
-            <p>test</p>
+            <div style="margin-left:0;"class="pcarousel owl-carousel">
+              <div class="pslide"> <img src="assets/images/pagew3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="service">
         <div class="section1" data-aos="slide-right">
           <div class="secontent1" data-aos-delay="1000"	data-aos="fade-down">
-            <p>test</p>
+            <div class="pcarouselbot owl-carousel">
+              <div class="pslide"> <img src="assets/images/page3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/page3-2.jpg" > </div>
+            </div>
           </div>
         </div>
         <div class="section2" data-aos="slide-left">
           <div class="secontent2" data-aos-delay="1000" data-aos="fade-up">
-            <p>test</p>
+            <div class="pcarousel owl-carousel">
+              <div class="pslide"> <img src="assets/images/pagew3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
+            </div>
           </div>
         </div>
       </div>
@@ -88,6 +112,17 @@
             autoplayTimeout:1700,
             autoplaySpeed: 500,
             autoplayHoverPause:true,
+            dots: false
+        });
+      });
+      $(document).ready(function(){
+        var owl = $('.pcarousel1');
+        owl.owlCarousel({
+            items:1,
+            loop:true,
+            autoplay:true,
+            autoplayTimeout:1700,
+            autoplaySpeed: 500,
             dots: false
         });
       });
