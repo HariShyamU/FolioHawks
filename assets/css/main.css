@@ -108,8 +108,8 @@ color: white;
 .link {
   border-radius: 50%;
   background-color: white;
-  height:0.5vh;
-  width: 0.5vh;
+  height:1vh;
+  width: 1vh;
   position: relative;
   margin: 0 auto;
   transition: all .15s ease-out;
