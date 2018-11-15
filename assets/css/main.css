@@ -67,6 +67,16 @@ text-decoration: none;
   padding-bottom: 8px;
 }
 
+.navigation-bar:hover .navline1-top{
+  position: relative;
+  right: 1vw;
+}
+
+.navigation-bar:hover .navline1-bot{
+  position: relative;
+  right: 1vw;
+}
+
 .navline1-top {
   position: relative;
   top: 0;
