@@ -226,8 +226,8 @@ color: white;
   background-color: black;
   text-align: center;
   color: white;
-  -webkit-clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 45% 0, 63% 100%, 0 100%);
+  clip-path: polygon(0 0, 45% 0, 63% 100%, 0 100%);
   /* animation-name: pullup;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -253,8 +253,8 @@ color: white;
   width: calc(100vw - ((100vw - 100%)));
   background-color: black;
   text-align: center;
-  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(57% 0, 100% 0, 100% 100%, 40% 100%);
+  clip-path: polygon(57% 0, 100% 0, 100% 100%, 40% 100%);
   /* animation-name: pullup;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
