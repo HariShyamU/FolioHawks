@@ -211,7 +211,7 @@ color: white;
 .buttons {
     position: relative;
     margin: 0 auto;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 
 }
 
@@ -249,11 +249,15 @@ color: white;
 
 .belowbutt img{
   padding-top: 1vh;
-  height: 5vh;
+  height: 4vh;
+  transition: all .15s ease-in;
+  
+
 }
 
 .belowbutt img:hover{
   cursor: pointer;
+  height: 5vh;
 }
 
 /* @media only screen and (max-width: 1360px) {
