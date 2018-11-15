@@ -236,7 +236,7 @@ color: white;
 .section2 {
   position: absolute;
   right:0;
-  width: calc(50vw - ((100vw - 100%)/2));
+  width: calc(64vw - ((100vw - 100%)/2));
   text-align: center;
   background-color: #C0C0C0	;
   height: 100vh;
@@ -250,7 +250,7 @@ color: white;
 .insection1 {
   position: absolute;
   right: 0;
-  width: calc(50vw - ((100vw - 100%)/2));
+  width: calc(64vw - ((100vw - 100%)/2));
   height: 100vh;
   background-color: black;
   color: white;
@@ -276,7 +276,13 @@ color: white;
   animation-timing-function: ease-out; */
 }
 
-.secontent {
+.secontent1 {
+  position: relative;
+  top:50%;
+  margin-right: 45vw;
+}
+
+.secontent2 {
   position: relative;
   top:50%;
 }
