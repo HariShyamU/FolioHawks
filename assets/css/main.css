@@ -236,12 +236,12 @@ color: white;
 .section2 {
   position: absolute;
   right:0;
-  width: calc(64vw - ((100vw - 100%)/2));
+  width: calc(57vw - ((100vw - 100%)/2));
   text-align: center;
   background-color: #C0C0C0	;
   height: 100vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
   /* animation-name: dropdown;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -252,11 +252,9 @@ color: white;
   height: 100vh;
   width: calc(100vw - ((100vw - 100%)));
   background-color: black;
-  color: white;
   text-align: center;
-  -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 2;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   /* animation-name: pullup;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -265,12 +263,12 @@ color: white;
 .insection2 {
   position: absolute;
   left: 0;
-  width: calc(64vw - ((100vw - 100%)/2));
+  width: calc(57vw - ((100vw - 100%)/2));
   height: 100vh;
   text-align: center;
   background-color: #C0C0C0	;
-  -webkit-clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
   /* animation-name: dropdown;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
@@ -283,6 +281,18 @@ color: white;
 }
 
 .secontent2 {
+  position: relative;
+  top:50%;
+}
+
+.insecontent1 {
+  position: relative;
+  top:50%;
+  margin-left: 65vw;
+  color: white;
+}
+
+.insecontent2 {
   position: relative;
   top:50%;
 }
