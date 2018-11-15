@@ -105,7 +105,13 @@ color: white;
   width: 1vh;
   position: relative;
   margin: 0 auto;
+  transition: all .15s ease-out;
   margin-bottom: 1vh;
+}
+
+.link:hover {
+  cursor: pointer;
+  background-color: black;
 }
 
 .navline-top {
@@ -237,6 +243,10 @@ color: white;
 .belowbutt img{
   padding-top: 1vh;
   height: 5vh;
+}
+
+.belowbutt img:hover{
+  cursor: pointer;
 }
 
 /* @media only screen and (max-width: 1360px) {
