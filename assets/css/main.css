@@ -58,6 +58,45 @@ background-color: #555;
 color: white;
 }
 
+.navigation-bar-right {
+  position: fixed;
+  right:0;
+  height: 100vh;
+  width: 5vw;
+  z-index: 10;
+}
+
+.links {
+  padding-top: 1vh;
+}
+
+.link {
+  border-radius: 50%;
+  background-color: white;
+  height:1vh;
+  width: 1vh;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 1vh;
+}
+
+.navline-top {
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  height: 46vh;
+  width:1px;
+  background-color: white;
+}
+
+.navline-bot {
+  position: relative;
+  margin: 0 auto;
+  height: 46vh;
+  width:1px;
+  background-color: white;
+}
+
 .Hbackgrnd {
   position: absolute;
   top:0;
@@ -113,7 +152,7 @@ color: white;
   display: inline;
   position: absolute;
   color: white;
-  bottom: 20vh;
+  bottom: 1vh;
   width: calc(100vw - ((100vw - 100%)));
   text-align: center;
 }
@@ -129,9 +168,10 @@ color: white;
 }
 
 .buttons {
-
     position: relative;
     margin: 0 auto;
+    margin-bottom: 5vh;
+
 }
 
 .HomeContent button {
@@ -140,7 +180,7 @@ color: white;
   border-color: white;
   border-width: 1px;
   border-style: groove;
-  font-size: 2vw;
+  font-size: 3vh;
   color:white;
   font-weight: 200;
   transition: all .15s ease-out;
@@ -152,6 +192,23 @@ color: white;
   background-color: white;
   color:black;
   cursor: pointer;
+}
+
+.belowbutt {
+  display: block;
+}
+
+.line {
+  margin: 0 auto;
+  width: 2px;
+  height: 2vh;
+  background-color:white;
+  transform: translateX(-25%);
+}
+
+.belowbutt img{
+  padding-top: 1vh;
+  height: 5vh;
 }
 
 /* @media only screen and (max-width: 1360px) {
