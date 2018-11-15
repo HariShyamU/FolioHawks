@@ -248,10 +248,9 @@ color: white;
 }
 
 .insection1 {
-  position: absolute;
-  right: 0;
-  width: calc(64vw - ((100vw - 100%)/2));
+  float: right;
   height: 100vh;
+  width: calc(100vw - ((100vw - 100%)));
   background-color: black;
   color: white;
   text-align: center;
@@ -264,13 +263,14 @@ color: white;
 }
 
 .insection2 {
-  float: left;
-  width: calc(100vw - ((100vw - 100%)));
+  position: absolute;
+  left: 0;
+  width: calc(64vw - ((100vw - 100%)/2));
   height: 100vh;
   text-align: center;
   background-color: #C0C0C0	;
-  -webkit-clip-path: polygon(0 0, 100% 0, 83% 100%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 83% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
   /* animation-name: dropdown;
   animation-duration: 1s;
   animation-timing-function: ease-out; */
