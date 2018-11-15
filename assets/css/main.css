@@ -69,12 +69,12 @@ text-decoration: none;
 
 .navigation-bar:hover .navline1-top{
   position: relative;
-  right: 1vw;
+  right: 5%;
 }
 
 .navigation-bar:hover .navline1-bot{
   position: relative;
-  right: 1vw;
+  right: 5%;
 }
 
 .navline1-top {
