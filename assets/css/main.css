@@ -320,7 +320,12 @@ color: white;
   padding-bottom: 5vh;
 }
 
+.pslide {
+}
+
 .pcontent {
+  position: relative;
+  top: 50%;
   margin-right: 50vw;
   text-align: center;
 }
