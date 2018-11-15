@@ -83,11 +83,9 @@ text-decoration: none;
 }
 
 .navigation-bar:hover #l1{
-  opacity: 0;
 }
 
 .navigation-bar:hover #l2{
-  opacity: 0;
 }
 
 li a:hover {
@@ -110,8 +108,8 @@ color: white;
 .link {
   border-radius: 50%;
   background-color: white;
-  height:1vh;
-  width: 1vh;
+  height:0.5vh;
+  width: 0.5vh;
   position: relative;
   margin: 0 auto;
   transition: all .15s ease-out;
