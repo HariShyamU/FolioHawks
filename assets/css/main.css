@@ -324,12 +324,13 @@ color: white;
 }
 
 .pcontent {
-  position: relative;
-  top: 50%;
+
   margin-right: 50vw;
   text-align: center;
 }
 
 .pcontentbot {
+  position: relative;
+  top: 50%;
   text-align: center;
 }
