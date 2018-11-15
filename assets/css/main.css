@@ -67,15 +67,15 @@ text-decoration: none;
   padding-bottom: 8px;
 }
 
-.navigation-bar:hover .navline1-top{
+/* .navigation-bar:hover .navline1-top{
   position: relative;
   right: 5%;
 }
 
 .navigation-bar:hover .navline1-bot{
-  position: relative;
+  position: absolute;
   right: 5%;
-}
+} */
 
 .navline1-top {
   position: relative;
@@ -98,6 +98,7 @@ text-decoration: none;
 
 .navigation-bar:hover{
   width:11vw;
+  min-width: 140px;
 }
 
 .navigation-bar:hover #HiddenText{
