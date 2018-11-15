@@ -45,6 +45,15 @@ text-decoration: none;
   height: 100%;
 }
 
+#firstlink {
+  margin-top:3vh;
+  height:54px;
+}
+
+.navigation-bar:hover #firstlink{
+  height:38px;
+}
+
 .navline1-top {
   position: relative;
   top: 0;
