@@ -47,7 +47,7 @@ text-decoration: none;
 
 #firstlink {
   height:2vh;
-  padding-bottom: 5vh;
+  padding-bottom: 4.6vh;
 }
 
 .navigation-bar:hover a{
@@ -56,6 +56,7 @@ text-decoration: none;
 
 .navigation-bar:hover #firstlink{
   height:2vh;
+  padding-bottom: 4vh;
 }
 
 #firstlink1 {
@@ -273,6 +274,17 @@ color: white;
   transition: all 0.15s;
   display: inline-block;
   text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  .HomeContent button {
+    display:block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 1vh;
+    left:50%;
+    transform:translateX(-50%);
+  }
 }
 
 .HomeContent button:hover {
