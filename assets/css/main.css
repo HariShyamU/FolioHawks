@@ -46,7 +46,8 @@ text-decoration: none;
 }
 
 #firstlink {
-  height:54px;
+  height:2vh;
+  padding-bottom: 5vh;
 }
 
 .navigation-bar:hover a{
@@ -54,17 +55,16 @@ text-decoration: none;
 }
 
 .navigation-bar:hover #firstlink{
-  height:38px;
+  height:2vh;
 }
 
 #firstlink1 {
-  height:38px;
-  padding-bottom: 0;
+  height:2vh;
+  padding-bottom: 4vh;
 }
 
 .navigation-bar:hover #firstlink1{
-  height:38px;
-  padding-bottom: 8px;
+  padding-bottom: 4vh;
 }
 
 .navigation-bar:hover .navline1-top{
