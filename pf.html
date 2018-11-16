@@ -12,7 +12,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navigation-bar">
+    <nav class="navigation-bar" data-aos="slide-right">
         <a style="padding:10px 0px 8px 5px; margin-bottom: 1vh;" href="index.html"> <img src="assets/images/newlogo.png" alt="">  <div style="padding-left:22px; font-size:20px;"></div> </a>
         <div class="navline1-top">        </div>
         <a id="firstlink" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
@@ -72,9 +72,18 @@
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/jquery.justifiedGallery.min.js"></script>
     <script type="text/javascript">
-      $(".imgvidproc").justifiedGallery();
-      $(".d3mod").justifiedGallery();
-      $(".contentcreate").justifiedGallery();
+      $(".imgvidproc").justifiedGallery({
+        rowHeight:160,
+        margins:5,
+      });
+      $(".d3mod").justifiedGallery({
+        rowHeight:160,
+        margins:5,
+      });
+      $(".contentcreate").justifiedGallery({
+        rowHeight:160,
+        margins:5,
+      });
 
       $(document).ready(function(){
         var owl = $('.gallery');
@@ -93,6 +102,10 @@
           owl.trigger('to.owl.carousel',[2]);
         })
       });
+
+      AOS.init({
+        duration: 1200,
+      })
     </script>
   </body>
 </html>

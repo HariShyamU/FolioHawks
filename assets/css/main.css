@@ -642,9 +642,8 @@ color: white;
 .gallery {
   position: relative;
   top:10vh;
-  left:10vw;
-  width: 80vw;
-  height: 50vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 /*
 .contentcreate {
