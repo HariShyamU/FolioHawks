@@ -131,7 +131,7 @@ text-decoration: none;
   display: block;
   color: white;
   font-size: 1vw;
-  padding: 8px 16px;
+  padding: 8px 2vw;
   text-decoration: none;
   }
 
@@ -334,7 +334,7 @@ color: white;
   text-align: center;
 }
 
-@media only screen and (max-width: 1300px) {
+/* @media only screen and (max-width: 1300px) {
   .HomeContent button {
     display:block;
     position: relative;
@@ -343,7 +343,7 @@ color: white;
     left:50%;
     transform:translateX(-50%);
   }
-}
+} */
 
 .HomeContent button:hover {
   background-color: white;
