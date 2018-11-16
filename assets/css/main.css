@@ -33,7 +33,7 @@ html {
 .navigation-bar a {
 display: block;
 color: white;
-font-size: 16px;
+font-size: 1vw;
 padding: 8px 2vw;
 text-decoration: none;
 }
