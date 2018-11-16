@@ -126,7 +126,7 @@ text-decoration: none;
 
 } */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   #HiddenText {
     padding-left: 0.5vw;
     display: inline-block;
