@@ -54,6 +54,10 @@ text-decoration: none;
   padding-left: 1vw;
 }
 
+.navigation-bar a:hover {
+  font-size: 1.2vw;
+}
+
 .navigation-bar:hover #firstlink{
   height:2vh;
   padding-bottom: 4vh;
