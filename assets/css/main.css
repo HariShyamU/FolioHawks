@@ -663,6 +663,9 @@ color: white;
 .slider-container img {
     height:100vh;
     width:auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 
