@@ -1,104 +1,193 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/aos.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <nav class="navigation-bar" data-aos="slide-right">
-        <a style="padding:10px 0px 8px 5px; margin-bottom: 1vh;" href="index.html"> <img src="assets/images/newlogo.png" alt="">  <div style="padding-left:22px; font-size:20px;"></div> </a>
-        <div class="navline1-top">        </div>
-        <a id="firstlink" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
-        <a href="pf.html"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
-        <a href="Services"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
-        <a id="firstlink1" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
-        <div class="navline1-bot">        </div>
-        <a id="firstlink" href="Portfolio"> <i class="fab fa-facebook-square"></i> <div id="HiddenText"><p>Facebook</p></div> </a>
-        <a id="firstlink1" href="Portfolio"> <i class="fab fa-linkedin-in"></i> <div id="HiddenText"><p>LinkedIn</p></div> </a>
-        <div class="navlinelow-bot" >        </div>
+</head>
+<body>
+  <nav class="navigation-bar" data-aos="slide-right">
+      <a class="logo"style="padding:10px 0px 8px 5px; margin-bottom: 1vh;" href="index.html"> <img src="assets/images/newlogo.png" alt="">  <div style="padding-left:22px; font-size:20px;"></div> </a>
+      <div class="navline1-top">        </div>
+      <a class="navbutt" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
+      <a class="navbutt"href="pf.html"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
+      <a class="navbutt"href=""> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
+      <a class="navbutt" style="margin-bottom: 2vh;" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
+      <div class="navline1-bot">        </div>
+      <a class="navbutt" href="Portfolio"> <i class="fab fa-facebook-square"></i> <div id="HiddenText"><p>Facebook</p></div> </a>
+      <a class="navbutt" style="margin-bottom: 2vh;" href="Portfolio"> <i class="fab fa-linkedin-in"></i> <div id="HiddenText"><p>LinkedIn</p></div> </a>
+      <div class="navlinelow-bot" >        </div>
 
-    </nav>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/jquery.justifiedGallery.min.js"></script>
-
-    <script type="text/javascript">
+  </nav>
+    <div id="data" class="slider-container owl-carousel"></div>
+    <img id="newtest" class="playcar" src="assets/images/autoplay.png">
+    <a class="close" href="pf.html"> <img src="assets/images/close.png"> </a>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/jquery.justifiedGallery.min.js"></script>
+<script type="text/javascript">
     AOS.init({
-      duration: 1200,
+        duration: 1200,
     })
 
-    var loadsliderdata= () => {
-      var imageid= localStorage.getItem('ImageId');
-      var sliderid= localStorage.getItem('SliderId');
-      console.log(imageid,sliderid);
-      var slidercont = document.createElement("div");
-      document.body.appendChild(slidercont);
-      console.log('test');
-      slidercont.classList.add("slider-container");
-      slidercont.classList.add("owl-carousel");
-      if (sliderid==1) {
-        var slider1 = document.createElement("div");
-        var slider2 = document.createElement("div");
-        var slider3 = document.createElement("div");
-        var slider4 = document.createElement("div");
-        var slider5 = document.createElement("div");
-        var slider6 = document.createElement("div");
-        var slider7 = document.createElement("div");
-        var image1 = document.createElement("img");
-        var image2 = document.createElement("img");
-        var image3 = document.createElement("img");
-        var image4 = document.createElement("img");
-        var image5 = document.createElement("img");
-        var image6 = document.createElement("img");
-        var image7 = document.createElement("img");
-        image1.src="assets/images/Fantasy Landscape 5.jpg";
-        image2.src="assets/images/Fantasy Landscape 5.jpg";
-        image3.src="assets/images/Fantasy Landscape 5.jpg";
-        image4.src="assets/images/Fantasy Landscape 5.jpg";
-        image5.src="assets/images/Fantasy Landscape 5.jpg";
-        image6.src="assets/images/Fantasy Landscape 5.jpg";
-        image7.src="assets/images/Fantasy Landscape 5.jpg";
-        slider1.appendChild(image1);
-        slidercont.appendChild(slider1);
-        slider2.appendChild(image2);
-        slidercont.appendChild(slider2);
-        slider3.appendChild(image3);
-        slidercont.appendChild(slider3);
-        slider4.appendChild(image4);
-        slidercont.appendChild(slider4);
-        slider5.appendChild(image5);
-        slidercont.appendChild(slider5);
-        slider6.appendChild(image6);
-        slidercont.appendChild(slider6);
-        slider7.appendChild(image7);
-        slidercont.appendChild(slider7);
-        console.log(document.body.childNodes);
-      }
+    var loadsliderdata = () => {
+        var imageid = localStorage.getItem('ImageId');
+        var sliderid = localStorage.getItem('SliderId');
+        console.log(imageid, sliderid);
+        var slidercont = document.getElementById("data");
+        console.log('test');
+        if (sliderid == 1) {
+            var slider1 = document.createElement("div");
+            var slider2 = document.createElement("div");
+            var slider3 = document.createElement("div");
+            var slider4 = document.createElement("div");
+            var slider5 = document.createElement("div");
+            var slider6 = document.createElement("div");
+            var slider7 = document.createElement("div");
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+            var image5 = document.createElement("img");
+            var image6 = document.createElement("img");
+            var image7 = document.createElement("img");
+            image1.src = "assets/images/Fantasy Landscape 5.jpg";
+            image2.src = "assets/images/Fantasy Landscape 5.jpg";
+            image3.src = "assets/images/Fantasy Landscape 5.jpg";
+            image4.src = "assets/images/Fantasy Landscape 5.jpg";
+            image5.src = "assets/images/Fantasy Landscape 5.jpg";
+            image6.src = "assets/images/Fantasy Landscape 5.jpg";
+            image7.src = "assets/images/Fantasy Landscape 5.jpg";
+            slider1.appendChild(image1);
+            slidercont.appendChild(slider1);
+            slider2.appendChild(image2);
+            slidercont.appendChild(slider2);
+            slider3.appendChild(image3);
+            slidercont.appendChild(slider3);
+            slider4.appendChild(image4);
+            slidercont.appendChild(slider4);
+            slider5.appendChild(image5);
+            slidercont.appendChild(slider5);
+            slider6.appendChild(image6);
+            slidercont.appendChild(slider6);
+            slider7.appendChild(image7);
+            slidercont.appendChild(slider7);
+            console.log(document.body.childNodes);
+        } else if (sliderid == 2) {
+            var slider1 = document.createElement("div");
+            var slider2 = document.createElement("div");
+            var slider3 = document.createElement("div");
+            var slider4 = document.createElement("div");
+            var slider5 = document.createElement("div");
+            var slider6 = document.createElement("div");
+            var slider7 = document.createElement("div");
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+            var image5 = document.createElement("img");
+            var image6 = document.createElement("img");
+            var image7 = document.createElement("img");
+            image1.src = "assets/images/Fantasy Landscape 5.jpg";
+            image2.src = "assets/images/Fantasy Landscape 5.jpg";
+            image3.src = "assets/images/Fantasy Landscape 5.jpg";
+            image4.src = "assets/images/Fantasy Landscape 5.jpg";
+            image5.src = "assets/images/Fantasy Landscape 5.jpg";
+            image6.src = "assets/images/Fantasy Landscape 5.jpg";
+            image7.src = "assets/images/Fantasy Landscape 5.jpg";
+            slider1.appendChild(image1);
+            slidercont.appendChild(slider1);
+            slider2.appendChild(image2);
+            slidercont.appendChild(slider2);
+            slider3.appendChild(image3);
+            slidercont.appendChild(slider3);
+            slider4.appendChild(image4);
+            slidercont.appendChild(slider4);
+            slider5.appendChild(image5);
+            slidercont.appendChild(slider5);
+            slider6.appendChild(image6);
+            slidercont.appendChild(slider6);
+            slider7.appendChild(image7);
+            slidercont.appendChild(slider7);
+            console.log(document.body.childNodes);
+        } else if (sliderid == 3) {
+            var slider1 = document.createElement("div");
+            var slider2 = document.createElement("div");
+            var slider3 = document.createElement("div");
+            var slider4 = document.createElement("div");
+            var slider5 = document.createElement("div");
+            var slider6 = document.createElement("div");
+            var slider7 = document.createElement("div");
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+            var image5 = document.createElement("img");
+            var image6 = document.createElement("img");
+            var image7 = document.createElement("img");
+            image1.src = "assets/images/Fantasy Landscape 5.jpg";
+            image2.src = "assets/images/Fantasy Landscape 5.jpg";
+            image3.src = "assets/images/Fantasy Landscape 5.jpg";
+            image4.src = "assets/images/Fantasy Landscape 5.jpg";
+            image5.src = "assets/images/Fantasy Landscape 5.jpg";
+            image6.src = "assets/images/Fantasy Landscape 5.jpg";
+            image7.src = "assets/images/Fantasy Landscape 5.jpg";
+            slider1.appendChild(image1);
+            slidercont.appendChild(slider1);
+            slider2.appendChild(image2);
+            slidercont.appendChild(slider2);
+            slider3.appendChild(image3);
+            slidercont.appendChild(slider3);
+            slider4.appendChild(image4);
+            slidercont.appendChild(slider4);
+            slider5.appendChild(image5);
+            slidercont.appendChild(slider5);
+            slider6.appendChild(image6);
+            slidercont.appendChild(slider6);
+            slider7.appendChild(image7);
+            slidercont.appendChild(slider7);
+            console.log(document.body.childNodes);
+        }
     }
 
-    $(document).ready(function(){
-      var owl = $('.slider-container');
-      owl.owlCarousel({
-          items:1,
-          loop:true,
-          dots: false,
-          autoHeight:true,
-          nav: true,
-          navText : ['<i class="fas fa-arrow-left"></i>','<i class="fas fa-arrow-circle-right"></i>']
-      });
+  /*  var playtest = document.getElementById('newtest')
+    playtest.onclick = () => {
+        playtest.style.marginRight = 10000;
+    }
+
+    var stoptest = document.getElementById('test')
+    stoptest.onclick = () => {
+        playtest.style.left = 48vw;
+        stoptest.style.visibility = 'none';
+    } */
+
+    $(document).ready(function () {
+        setTimeout(function () {
+            var owl = $('.slider-container');
+            owl.owlCarousel({
+                items: 1,
+                loop: true,
+                dots: false,
+                nav: true,
+                navText: ['<img src="assets/images/left.png">', '<img src="assets/images/right.png">']
+            });
+            $('.playcar').on('click', function () {
+                owl.trigger('play.owl.autoplay', [2000])
+            })
+            $('.stop').on('click', function () {
+                owl.trigger('stop.owl.autoplay')
+            })
+        }, 100);
     });
 
     window.onload = loadsliderdata;
 
-
-    </script>
-  </body>
+</script>
 </html>

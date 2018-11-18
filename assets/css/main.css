@@ -38,6 +38,11 @@ padding: 2vh 2vw;
 text-decoration: none;
 }
 
+.navbutt {
+  height:3vh;
+  margin-bottom:1vh;
+}
+
 .navigation-bar img {
 
   display: block;
@@ -45,32 +50,13 @@ text-decoration: none;
   height: 100%;
 }
 
-#firstlink {
-  height:2vh;
-  padding-bottom: 4.6vh;
-}
+
 
 .navigation-bar:hover a{
   padding-left: 1vw;
 }
 
-.navigation-bar a:hover {
-  font-size: 1.2vw;
-}
 
-.navigation-bar:hover #firstlink{
-  height:2vh;
-  padding-bottom: 4vh;
-}
-
-#firstlink1 {
-  height:2vh;
-  padding-bottom: 4vh;
-}
-
-.navigation-bar:hover #firstlink1{
-  padding-bottom: 4vh;
-}
 
 .navigation-bar:hover .navline1-top{
   position: relative;
@@ -91,6 +77,7 @@ text-decoration: none;
   position: relative;
   top: 0;
   margin: 0 auto;
+  padding-top: 2vh;
   height: 30vh;
   width:1px;
   transition: all 0.15s;
@@ -101,7 +88,7 @@ text-decoration: none;
   position: relative;
   top: 0;
   margin: 0 auto;
-  height: 15vh;
+  height: 20vh;
   width:1px;
   background-color: white;
   transition: all 0.15s;
@@ -614,26 +601,12 @@ color: white;
   padding-bottom: 2vh;
 }
 
-.pfcats a {
-  border-style: dashed;
-  border-width: 1px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+.but {
   margin-left: 2vw;
   padding:2vh 2vw 2vh 2vw;
   text-decoration: none;
   color: black;
-  background-color: rgba(200,200,200,1);
-  transition: all 0.5s;
 }
-
-.pfcats a:hover {
-  background-color: white;
-  border-style: dotted;
-  border-width: 2px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-}
-
 .headline {
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -656,11 +629,19 @@ color: white;
   margin-bottom: 2vh;
 }
 
+.imgallery a:hover {
+    cursor: pointer;
+}
+
 .d3gallery a{
   display: inline-block;
   width: 29vw;
   padding-left:1vw;
   margin-bottom: 2vh;
+}
+
+.d3gallery a:hover {
+    cursor: pointer;
 }
 
 .contentgallery a{
@@ -670,29 +651,75 @@ color: white;
   margin-bottom: 2vh;
 }
 
+.contentgallery a:hover {
+    cursor: pointer;
+}
+
 .slider-container {
-  overflow: hidden;
-  width: 100vw;
+    overflow: hidden;
   height:100vh;
 }
 
-.owl-prev {
-    width: 5vh;
-    height: 5vw;
-    position: absolute;
-    top: 80%;
-    left: 40vw;
-    margin-left: -20px;
-    display: block !important;
-    background-color: white;
+.slider-container img {
+    height:100vh;
 }
 
-.owl-next {
-    width: 5vh;
-    height: 5vw;
+
+.owl-prev img{
+    width: 2vw;
+    height:auto;
     position: absolute;
-    top: 80%;
-    right: 40vw;
-    display: block !important;
+    top: 85%;
+    left: 43vw;
+    margin-left: -20px;
+}
+
+.playcar {
+    position: absolute;
+    top: 85%;
+    left: 48vw;
+    width: 2vw;
+    height:2vw;
+    z-index:2;
+}
+
+#test {
+    position: absolute;
+    top: 85%;
+    left: 51vw;
+    width: 3vw;
+    height: auto;
+    z-index: 2;
+}
+
+#test:hover {
+    cursor:pointer;
+}
+
+.playcar:hover {
+    cursor: pointer;
+}
+
+
+.owl-next img{
+    height: 2vw;
+    width: auto;
+    position: absolute;
+    top: 85%;
+    right: 43vw;
     color: white;
+}
+
+.close {
+  position: absolute;
+  top: 10%;
+  right:10%;
+  width: 2vw;
+  height:2vw;
+  z-index:2;
+}
+
+.close img {
+  height: 100%;
+  width:100%;
 }
