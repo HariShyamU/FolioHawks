@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navigation-bar" data-aos="slide-right">
+    <nav id="leftnavbar" class="navigation-bar" data-aos="slide-right">
         <a class="logo"style="padding:10px 0px 8px 5px; margin-bottom: 1vh;" href="index.html"> <img src="assets/images/newlogo.png" alt="">  <div style="padding-left:22px; font-size:20px;"></div> </a>
         <div class="navline1-top">        </div>
         <a class="navbutt" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
@@ -29,16 +29,16 @@
 
       </div>
       <div class="links">
-        <div class="link"></div>
-        <div class="link"></div>
-        <div class="link"></div>
-        <div class="link"></div>
+        <div onclick="snapscroll('Home')" class="link"> <a ></a> </div>
+        <div onclick="snapscroll('service1')" class="link"> <a  ></a> </div>
+        <div onclick="snapscroll('service2')"class="link"> <a ></a> </div>
+        <div onclick="snapscroll('service3')"class="link"> <a ></a> </div>
       </div>
       <div class="navline-bot">
 
       </div>
     </nav>
-    <div class="Hbackgrnd owl-carousel" >
+    <div id="Home" class="Hbackgrnd owl-carousel" >
       <div class="slide1">  </div>
       <div class="slide2">  </div>
       <div class="slide3">  </div>
@@ -57,11 +57,11 @@
         <span>         </span>
       </div>
     </div>
-    <div class="belowbutt">
+    <div onclick="snapscroll('service1')" class="belowbutt">
       <img src="assets/images/circle.svg">
     </div>
-    <div class="footer">
-      <div class="service">
+    <div class="sfooter">
+      <div id="service1" class="service">
         <div class="section1" data-aos="slide-right">
           <div class="secontent1" data-aos-delay="1000"	data-aos="fade-down">
             <div class="pcontent">
@@ -85,7 +85,7 @@
           </div>
         </div>
       </div>
-      <div class="service">
+      <div id="service2" class="service">
         <div class="insection1" data-aos="slide-left">
           <div class="insecontent1" data-aos-delay="1000"	data-aos="fade-down">
             <div class="pcarouselbot owl-carousel">
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-      <div class="service">
+      <div id="service3" class="service">
         <div class="section1" data-aos="slide-right">
           <div class="secontent1" data-aos-delay="1000"	data-aos="fade-down">
             <div class="pcarouselbot owl-carousel">
@@ -122,7 +122,9 @@
         </div>
       </div>
     </div>
+    <div class="footer">
 
+    </div>
 
 
     <script src="assets/js/jquery.min.js"></script>
@@ -154,8 +156,53 @@
         });
       });
 
+      window.onload = () => {
+        document.getElementById('leftnavbar').classList.add("highlight");
+        setTimeout(function(){
+          var element = document.getElementById("leftnavbar");
+          element.classList.remove("highlight");
+        }, 2000);
+      }
+
       AOS.init({
         duration: 1200,
+      });
+      // let anchorlinks = document.querySelectorAll('a[href^="#"]')
+      //
+      // for (let item of anchorlinks) {
+      //     console.log(item);
+      //     item.addEventListener('click', (e)=> {
+      // 		let hashval = item.getAttribute('href')
+      // 		let target = document.querySelector(hashval)
+      //     console.log(target);
+      // 		target.scrollIntoView({
+      // 			behavior: 'smooth'
+      // 		})
+      // 		history.pushState(null, null, hashval)
+      // 		e.preventDefault()
+      // 	})
+      // }
+
+      var snapscroll = (id) => {
+        var target = document.getElementById(id);
+        target.scrollIntoView ({
+          behavior: 'smooth'
+        })
+      }
+
+      jQuery(document).ready(function($){
+          var $root = $('html, body');
+          $('a[href^="#"]').click(function() {
+              var href = $.attr(this, 'href');
+              $root.animate({
+                  scrollTop: $(href).offset().top
+              }, 500, function () {
+                  window.location.hash = href;
+              });
+
+              return false;
+          });
+
       })
 
     </script>

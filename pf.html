@@ -114,6 +114,9 @@
         </div>
       </div>
     </div>
+    <div class="pfooter">
+
+    </div>
 
 
     <script src="assets/js/jquery.min.js"></script>
@@ -134,12 +137,25 @@
       //   margins:5,
       // });
 
+      function setOwlStageHeight(event) {
+          var maxHeight = 0;
+          $('.owl-item.active').each(function () { // LOOP THROUGH ACTIVE ITEMS
+              var thisHeight = parseInt( $(this).height() );
+              maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
+          });
+          $('.owl-carousel').css('height', maxHeight );
+          $('.owl-stage-outer').css('height', maxHeight ); // CORRECT DRAG-AREA SO BUTTONS ARE CLICKABLE
+      }
+
       $(document).ready(function(){
         var owl = $('.gallery');
         owl.owlCarousel({
             items:1,
             loop:true,
             dots:false,
+            onInitialized: setOwlStageHeight,
+            onResized: setOwlStageHeight,
+            onTranslated: setOwlStageHeight
         });
         $('#but1').click(function(){
             owl.trigger('to.owl.carousel',[0]);

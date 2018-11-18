@@ -23,6 +23,11 @@ html {
   z-index: 10;
 }
 
+.navigation-bar.highlight {
+    background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(255,0,0,0));
+  width:11vw;
+}
+
 #HiddenText {
   padding-left: 0.5vw;
   display: inline-block;
@@ -205,10 +210,8 @@ text-decoration: none;
   opacity: 1;
 }
 
-.navigation-bar:hover #l1{
-}
-
-.navigation-bar:hover #l2{
+.navigation-bar.highlight #HiddenText{
+  opacity: 1;
 }
 
 li a:hover {
@@ -451,7 +454,7 @@ color: white;
   opacity: 0;
 }
 
-.footer {
+.sfooter {
   overflow-x: hidden;
   position: relative;
   background-color: white;
@@ -578,6 +581,19 @@ color: white;
   text-align: center;
 }
 
+.footer {
+  height: 10vh;
+  position: relative;
+  top:100vh;
+  background-color: black;
+}
+
+.pfooter {
+  height: 10vh;
+  position: relative;
+  background-color: black;
+}
+
 .pfpage {
   box-sizing: border-box;
   text-align: center;
@@ -626,6 +642,9 @@ color: white;
   padding-left: 5vw;
   padding-right: 5vw;
 }
+
+.owl-carousel,
+.owl-stage-outer { transition: height 500ms ease-in-out 0s; }
 
 .imgallery a{
   display: inline-block;
