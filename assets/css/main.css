@@ -661,6 +661,8 @@ color: white;
 }
 
 .slider-container img {
+    height:100vh;
+    width:auto;
 }
 
 
