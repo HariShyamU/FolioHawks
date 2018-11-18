@@ -607,6 +607,11 @@ color: white;
   text-decoration: none;
   color: black;
 }
+
+.but:hover {
+  cursor: pointer;
+}
+
 .headline {
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -633,12 +638,12 @@ color: white;
     cursor: pointer;
 }
 
-.d3gallery a{
+/* .d3gallery a{
   display: inline-block;
   width: 29vw;
   padding-left:1vw;
   margin-bottom: 2vh;
-}
+} */
 
 .d3gallery a:hover {
     cursor: pointer;
