@@ -656,26 +656,32 @@ color: white;
 }
 
 .slider-container {
+    background-color: black;
     overflow: hidden;
-  height:100vh;
+    height:100vh;
+}
+
+#slider {
+    height:100vh;
 }
 
 .slider-container img {
-    height:100vh;
-    width:auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    width:100vh;
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
 }
 
 
-.owl-prev img{
+.prev {
     width: 2vw;
     height:auto;
     position: absolute;
     top: 85%;
     left: 43vw;
     margin-left: -20px;
+    z-index:2;
 }
 
 .playcar {
@@ -704,14 +710,22 @@ color: white;
     cursor: pointer;
 }
 
+.next:hover {
+    cursor: pointer;
+}
 
-.owl-next img{
+.prev:hover {
+    cursor: pointer;
+}
+
+.next {
     height: 2vw;
     width: auto;
     position: absolute;
     top: 85%;
     right: 43vw;
     color: white;
+    z-index:2;
 }
 
 .close {

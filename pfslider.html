@@ -25,7 +25,9 @@
 
   </nav>
     <div id="data" class="slider-container owl-carousel"></div>
-    <img id="newtest" class="playcar" src="assets/images/autoplay.png">
+    <img class="playcar" src="assets/images/autoplay.png">
+    <img class="prev" src="assets/images/left.png">
+    <img class="next" src="assets/images/right.png">
     <a class="close" href="pf.html"> <img src="assets/images/close.png"> </a>
 </body>
 <script src="assets/js/jquery.min.js"></script>
@@ -44,13 +46,20 @@
         var slidercont = document.getElementById("data");
         console.log('test');
         if (sliderid == 1) {
-            var slider1 = document.createElement("div");
-            var slider2 = document.createElement("div");
-            var slider3 = document.createElement("div");
-            var slider4 = document.createElement("div");
-            var slider5 = document.createElement("div");
-            var slider6 = document.createElement("div");
-            var slider7 = document.createElement("div");
+          var slider1 = document.createElement("div");
+          slider1.id="slider";
+          var slider2 = document.createElement("div");
+          slider1.id="slider";
+          var slider3 = document.createElement("div");
+          slider1.id="slider";
+          var slider4 = document.createElement("div");
+          slider1.id="slider";
+          var slider5 = document.createElement("div");
+          slider1.id="slider";
+          var slider6 = document.createElement("div");
+          slider1.id="slider";
+          var slider7 = document.createElement("div");
+          slider1.id="slider";
             var image1 = document.createElement("img");
             var image2 = document.createElement("img");
             var image3 = document.createElement("img");
@@ -81,13 +90,20 @@
             slidercont.appendChild(slider7);
             console.log(document.body.childNodes);
         } else if (sliderid == 2) {
-            var slider1 = document.createElement("div");
-            var slider2 = document.createElement("div");
-            var slider3 = document.createElement("div");
-            var slider4 = document.createElement("div");
-            var slider5 = document.createElement("div");
-            var slider6 = document.createElement("div");
-            var slider7 = document.createElement("div");
+          var slider1 = document.createElement("div");
+          slider1.id="slider";
+          var slider2 = document.createElement("div");
+          slider1.id="slider";
+          var slider3 = document.createElement("div");
+          slider1.id="slider";
+          var slider4 = document.createElement("div");
+          slider1.id="slider";
+          var slider5 = document.createElement("div");
+          slider1.id="slider";
+          var slider6 = document.createElement("div");
+          slider1.id="slider";
+          var slider7 = document.createElement("div");
+          slider1.id="slider";
             var image1 = document.createElement("img");
             var image2 = document.createElement("img");
             var image3 = document.createElement("img");
@@ -119,12 +135,19 @@
             console.log(document.body.childNodes);
         } else if (sliderid == 3) {
             var slider1 = document.createElement("div");
+            slider1.id="slider";
             var slider2 = document.createElement("div");
+            slider1.id="slider";
             var slider3 = document.createElement("div");
+            slider1.id="slider";
             var slider4 = document.createElement("div");
+            slider1.id="slider";
             var slider5 = document.createElement("div");
+            slider1.id="slider";
             var slider6 = document.createElement("div");
+            slider1.id="slider";
             var slider7 = document.createElement("div");
+            slider1.id="slider";
             var image1 = document.createElement("img");
             var image2 = document.createElement("img");
             var image3 = document.createElement("img");
@@ -177,13 +200,15 @@
                 dots: false,
                 nav: true,
                 autoHeight: true,
-                navText: ['<img src="assets/images/left.png">', '<img src="assets/images/right.png">']
             });
             $('.playcar').on('click', function () {
                 owl.trigger('play.owl.autoplay', [2000])
             })
-            $('.stop').on('click', function () {
-                owl.trigger('stop.owl.autoplay')
+            $('.next').on('click', function () {
+                owl.trigger('next.owl.carousel')
+            })
+            $('.prev').on('click', function () {
+                owl.trigger('prev.owl.carousel')
             })
         }, 100);
     });
