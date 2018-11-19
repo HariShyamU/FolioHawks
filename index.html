@@ -16,7 +16,7 @@
         <div class="navline1-top">        </div>
         <a class="navbutt" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
         <a class="navbutt"href="pf.html"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
-        <a class="navbutt"href=""> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
+        <a style="cursor:pointer;" onclick="snapscroll('service1')" class="navbutt"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
         <a class="navbutt" style="margin-bottom: 2vh;" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
         <div class="navline1-bot">        </div>
         <a class="navbutt" href="Portfolio"> <i class="fab fa-facebook-square"></i> <div id="HiddenText"><p>Facebook</p></div> </a>
@@ -49,9 +49,9 @@
       <h3></h3>
       <p></p>
       <div class="buttons">
-        <button style="margin-right:2vw;" type="button" name="button">SERVICE 1</button>
-        <button style="margin-right:2vw;" type="button" name="button">SERVICE 2</button>
-        <button style="margin-right:0;;" type="button" name="button">SERVICE 3</button>
+        <button onclick="portfolioredir()" style="margin-right:2vw;" type="button" name="button">BRAND IDENTITY</button>
+        <button  onclick="portfolioredir()" style="margin-right:2vw;" type="button" name="button">3D MODELLING</button>
+        <button onclick="portfolioredir()" style="margin-right:0;;" type="button" name="button">VIDEO CREATIONS</button>
       </div>
       <div class="line">
         <span>         </span>
@@ -190,20 +190,9 @@
         })
       }
 
-      jQuery(document).ready(function($){
-          var $root = $('html, body');
-          $('a[href^="#"]').click(function() {
-              var href = $.attr(this, 'href');
-              $root.animate({
-                  scrollTop: $(href).offset().top
-              }, 500, function () {
-                  window.location.hash = href;
-              });
-
-              return false;
-          });
-
-      })
+      var portfolioredir = () => {
+        window.location='./pf.html'
+      }
 
     </script>
   </body>
