@@ -22,10 +22,10 @@ html {
 #loader {
     display: block;
     position: relative;
-    left: 50%;
+    left: 54vw;
     top: 50%;
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
