@@ -382,6 +382,7 @@ color: white;
   top: 0%;
   right: 50%;
   transform: translateX(50%);
+  width:100%;
   min-width: 100%;
   min-height: 100%;
 }
