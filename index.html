@@ -41,14 +41,14 @@
       </div>
     </nav>
     <div id="Home" class="Hbackgrnd owl-carousel" >
-      <div class="slide1">  </div>
-      <div class="slide2">  </div>
-      <div class="slide3">  </div>
       <div class="item">
           <video loop muted autoplay id="video">
               <source src="https://drive.google.com/uc?authuser=0&id=1zQWoGWDpq_bMZxTTndW7dJTadCGyWL35&export=download" type="video/mp4" >
           </video>
       </div>
+      <div class="slide1">  </div>
+      <div class="slide2">  </div>
+      <div class="slide3">  </div>
       <div class="slide5">  </div>
       <div class="slide6">  </div>
     </div>
@@ -144,7 +144,7 @@
         owl.owlCarousel({
             items:1,
             loop:true,
-            autoplay:false,
+            autoplay:true,
             autoplayTimeout:2500,
             autoplaySpeed: 500,
             autoplayHoverPause:true,
@@ -155,6 +155,7 @@
               if ($(".owl-item.active video", this.$element).length) {
                 $(".owl-item.active video", this.$element)[0].play();
                 owl.trigger('stop.owl.autoplay')
+
                 $(".owl-item.active video", this.$element).on('ended', function() {
                   $(".owl-item.active video", this.$element)[0].play();
                 });
@@ -164,12 +165,16 @@
               if ($(".owl-item.active video", this.$element).length) {
                 $(".owl-item.active video", this.$element)[0].play();
                 owl.trigger('stop.owl.autoplay')
+                setTimeout(function(){
+                    owl.trigger('play.owl.autoplay') // <-- 10 is the delay of scroll
+                }, 6000);
                 $(".owl-item.active video", this.$element).on('ended', function() {
                   $(".owl-item.active video", this.$element)[0].play();
                 });
               }
             }
         });
+
       });
       $(document).ready(function(){
         var owl = $('.pcarousel1');
