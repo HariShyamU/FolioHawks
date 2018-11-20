@@ -379,6 +379,7 @@ color: white;
 
 #video {
   position: fixed;
+  top: 0%;
   right: 50%;
   transform: translateX(50%);
   min-width: 100%;
