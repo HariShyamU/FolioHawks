@@ -52,9 +52,9 @@
       <h3></h3>
       <p></p>
       <div style="display:none" class="buttons" id="dis1">
-        <button onclick="portfolioredir()" style="margin-right:2vw;" type="button" name="button">BRAND IDENTITY</button>
-        <button  onclick="portfolioredir()" style="margin-right:2vw;" type="button" name="button">3D MODELLING</button>
-        <button onclick="portfolioredir()" style="margin-right:0;;" type="button" name="button">VIDEO CREATIONS</button>
+        <button onclick="portfolioredir(1)" style="margin-right:2vw;" type="button" name="button">BRAND IDENTITY</button>
+        <button  onclick="portfolioredir(2)" style="margin-right:2vw;" type="button" name="button">3D MODELLING</button>
+        <button onclick="portfolioredir(3)" style="margin-right:0;;" type="button" name="button">VIDEO CREATIONS</button>
       </div>
       <div style="display:none" class="line" id="dis2">
         <span>         </span>
@@ -126,8 +126,8 @@
       </div>
     </div>
     <div class="footer">
-      <p style="color:white; padding-top: 3vh; font-size: 2vh;text-align: center;">All content is © FolioHawks 2018 and respective owners.     All rights reserved.     FolioHawks® is trademark registered in India </p>
-      <p style="color:white; padding-top: 1vh; font-size: 2vh;text-align: center;">Designed & developed by: Hari Shyam.</p>
+      <div style="color:white; margin-top: 1vh; font-size: 2vh;text-align: center;">All content is © FolioHawks 2018 and respective owners.<div style="width:5vw; height:1vh; display:inline-block;"></div>All rights reserved.     FolioHawks® is trademark registered in India. <div style="width:5vw; height:1vh; display:inline-block;"></div> Designed & developed by: Hari Shyam.</div>
+      <p style="color:white; padding-top: 1vh; font-size: 2vh;text-align: center;"></p>
     </div>
 
 
@@ -208,7 +208,8 @@
         })
       }
 
-      var portfolioredir = () => {
+      var portfolioredir = (slideid) => {
+        localStorage.setItem("SlideId", slideid);
         window.location='./pf.html'
       }
 

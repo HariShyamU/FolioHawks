@@ -28,7 +28,7 @@
     <img class="playcar" src="assets/images/autoplay.png">
     <img class="prev" src="assets/images/left.png">
     <img class="next" src="assets/images/right.png">
-    <a class="close" href="pf.html"> <img src="assets/images/close.png"> </a>
+    <a style="cursor:pointer;"class="close" onClick="slidata(localStorage.getItem('SliderId'))"> <img src="assets/images/close.png"> </a>
 </body>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
@@ -396,6 +396,11 @@
     });
 
     window.onload = loadsliderdata;
+
+    var slidata = (slideid) => {
+      localStorage.setItem("SlideId", slideid);
+      window.location = "./pf.html"
+    }
 
 </script>
 </html>

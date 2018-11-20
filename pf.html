@@ -114,9 +114,9 @@
         </div>
       </div>
     </div>
-    <div class="pfooter">
-
-    </div>
+    <!-- <div class="pfooter"> -->
+      <!-- <div style="color:white; margin-top: 1vh; font-size: 2vh;text-align: center;">All content is © FolioHawks 2018 and respective owners.<div style="width:5vw; height:1vh; display:inline-block;"></div>All rights reserved.     FolioHawks® is trademark registered in India. <div style="width:5vw; height:1vh; display:inline-block;"></div> Designed & developed by: Hari Shyam.</div> -->
+    <!-- </div> -->
 
 
     <script src="assets/js/jquery.min.js"></script>
@@ -147,8 +147,25 @@
           $('.owl-stage-outer').css('height', maxHeight ); // CORRECT DRAG-AREA SO BUTTONS ARE CLICKABLE
       }
 
+      var startslide = localStorage.getItem('SlideId');
+      if (startslide>0){
+        startslide-=1;
+      } else if (startslide==0 || startslide==null){
+        startslide=0;
+      }
+      localStorage.clear();
+
+
       $(document).ready(function(){
         var owl = $('.gallery');
+        function start() {
+          owl.trigger('to.owl.carousel',[startslide]);
+          console.log([startslide]);
+        }
+        // owl.on('initialized.owl.carousel', function(event) {
+        //   console.log(startslide);
+        //   start();
+        // })
         owl.owlCarousel({
             items:1,
             loop:true,
@@ -156,8 +173,9 @@
             lazyLoad: true,
             onInitialized: setOwlStageHeight,
             onResized: setOwlStageHeight,
-            onTranslated: setOwlStageHeight
+            onTranslated: setOwlStageHeight,
         });
+        start();
         $('#but1').click(function(){
             owl.trigger('to.owl.carousel',[0]);
         })
@@ -172,8 +190,6 @@
       AOS.init({
         duration: 1200,
       })
-
-      window.onload = localStorage.clear();
 
       var sliderdata = (imageid,sliderid) => {
         localStorage.setItem("ImageId", imageid);
