@@ -43,7 +43,7 @@
     <div id="Home" class="Hbackgrnd owl-carousel" >
       <div class="item">
           <video loop muted autoplay id="video">
-              <source src="https://drive.google.com/uc?authuser=0&id=1zQWoGWDpq_bMZxTTndW7dJTadCGyWL35&export=download" type="video/mp4" >
+              <source src="../FolioHawks/assets/images/Converse.mp4" type="video/mp4" >
           </video>
       </div>
       <div class="slide1">  </div>
@@ -167,7 +167,7 @@
                 owl.trigger('stop.owl.autoplay')
                 setTimeout(function(){
                     owl.trigger('play.owl.autoplay') // <-- 10 is the delay of scroll
-                }, 3500);
+                }, 3000);
                 $(".owl-item.active video", this.$element).on('ended', function() {
                   $(".owl-item.active video", this.$element)[0].play();
                 });
