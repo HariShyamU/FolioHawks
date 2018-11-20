@@ -895,11 +895,13 @@ color: white;
 }
 
 .leftsection p{
-  color: rgba(200,200,200,1);
+  color: #7a7a7a;
+  font-weight: bold;
 }
 
 .rightsection p{
-  color: rgba(200,200,200,1);
+  color: #7a7a7a;
+  font-weight: bold;
 }
 
 .input-container {
