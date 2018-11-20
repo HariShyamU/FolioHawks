@@ -167,7 +167,7 @@
                 owl.trigger('stop.owl.autoplay')
                 setTimeout(function(){
                     owl.trigger('play.owl.autoplay') // <-- 10 is the delay of scroll
-                }, 6000);
+                }, 3500);
                 $(".owl-item.active video", this.$element).on('ended', function() {
                   $(".owl-item.active video", this.$element)[0].play();
                 });
