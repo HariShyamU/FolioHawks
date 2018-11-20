@@ -11,6 +11,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
     <nav id="leftnavbar" class="navigation-bar" data-aos="slide-right">
         <a class="logo"style="padding:10px 0px 8px 5px; margin-bottom: 1vh;" href="index.html"> <img src="assets/images/newlogo.png" alt="">  <div style="padding-left:22px; font-size:20px;"></div> </a>
         <div class="navline1-top">        </div>
@@ -49,16 +52,16 @@
     <div class="HomeContent">
       <h3></h3>
       <p></p>
-      <div class="buttons">
+      <div style="display:none" class="buttons" id="dis1">
         <button onclick="portfolioredir()" style="margin-right:2vw;" type="button" name="button">BRAND IDENTITY</button>
         <button  onclick="portfolioredir()" style="margin-right:2vw;" type="button" name="button">3D MODELLING</button>
         <button onclick="portfolioredir()" style="margin-right:0;;" type="button" name="button">VIDEO CREATIONS</button>
       </div>
-      <div class="line">
+      <div style="display:none" class="line" id="dis2">
         <span>         </span>
       </div>
     </div>
-    <div onclick="snapscroll('service1')" class="belowbutt">
+    <div style="display:none" onclick="snapscroll('service1')" class="belowbutt" id="dis3">
       <img src="assets/images/circle.svg">
     </div>
     <div class="sfooter">
@@ -163,7 +166,20 @@
         setTimeout(function(){
           var element = document.getElementById("leftnavbar");
           element.classList.remove("highlight");
+          showPage();
         }, 2000);
+      }
+
+      function myFunction() {
+
+      }
+
+      function showPage() {
+
+        document.getElementById("dis1").style.display = "block";
+        document.getElementById("dis2").style.display = "block";
+        document.getElementById("dis3").style.display = "block";
+        document.getElementById("preloader").style.display = "none";
       }
 
       AOS.init({
