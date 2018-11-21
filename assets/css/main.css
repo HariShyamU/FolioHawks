@@ -747,10 +747,14 @@ color: white;
 }
 
 .pfooter {
-  height: 3vh;
+  height: 16vh;
   position: relative;
-  background-color: black;
+  background-color: rgba(25,25,25,1);
+  color: rgba(200,200,200,1);
+  font-size: 0.8vw;
 }
+
+
 
 .pfpage {
   box-sizing: border-box;
@@ -761,6 +765,7 @@ color: white;
 .pfheadings  h2{
   padding-top: 5vh;
   font-weight: 100;
+  font-size: 28px;
 }
 
 .pfheadings p {
@@ -955,12 +960,11 @@ color: white;
 
 .leftsection p{
   color: #7a7a7a;
-  font-weight: bold;
 }
 
 .rightsection p{
   color: #7a7a7a;
-  font-weight: bold;
+  padding-bottom: 1vh;
 }
 
 .input-container {
