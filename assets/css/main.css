@@ -909,11 +909,11 @@ color: white;
     display: -ms-flexbox; /* IE10 */
     display: flex;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
 }
 
 .icon {
-    margin: auto;
+    margin: 0 auto;
     color: black;
     font-size: 20px;
     padding-left: 5px;
@@ -921,10 +921,12 @@ color: white;
     width:3vw;
     text-align: center;
     background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 .icon .facon {
-  margin-top: 0.6vh;
+
 }
 
 .input-field {
