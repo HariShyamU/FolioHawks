@@ -964,6 +964,7 @@ color: white;
 
 .gmap {
   padding-top: 5vh;
-  height: 40vh;
+  height: 35vh;
+  max-height: 400px;
   width: 16vw;
 }
