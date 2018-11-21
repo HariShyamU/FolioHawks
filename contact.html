@@ -16,7 +16,7 @@
         <div class="navline1-top">        </div>
         <a class="navbutt" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
         <a class="navbutt"href="pf.html"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
-        <a style="cursor:pointer;" onclick="snapscroll('service1')" class="navbutt"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
+        <a style="cursor:pointer;" onclick="servicedata(1)" class="navbutt"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
         <a class="navbutt" style="margin-bottom: 2vh;" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
         <div class="navline1-bot">        </div>
         <a class="navbutt" href="Portfolio"> <i class="fab fa-facebook-square"></i> <div id="HiddenText"><p>Facebook</p></div> </a>
@@ -119,6 +119,11 @@
     AOS.init({
       duration: 1200,
     })
+
+    var servicedata = (serviceid) => {
+      localStorage.setItem("serviceid", serviceid);
+      window.location = "./index.html"
+    }
     </script>
 
   </body>

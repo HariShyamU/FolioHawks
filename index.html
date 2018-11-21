@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
   </head>
   <body>
     <div id="preloader">
@@ -19,7 +22,7 @@
         <div class="navline1-top">        </div>
         <a class="navbutt" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
         <a class="navbutt"href="pf.html"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
-        <a style="cursor:pointer;" onclick="snapscroll('service1')" class="navbutt"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
+        <a href="index.html#2" id="servicebutt" class="navbutt"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
         <a class="navbutt" id="lastbutt" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
         <div class="navline1-bot">        </div>
         <a class="navbutt" href="Portfolio"> <i class="fab fa-facebook-square"></i> <div id="HiddenText"><p>Facebook</p></div> </a>
@@ -31,16 +34,19 @@
 
       </div>
       <div class="links">
-        <div onclick="snapscroll('Home')" class="link"> <a ></a> </div>
-        <div onclick="snapscroll('service1')" class="link"> <a  ></a> </div>
-        <div onclick="snapscroll('service2')"class="link"> <a ></a> </div>
-        <div onclick="snapscroll('service3')"class="link"> <a ></a> </div>
+        <div  class="link" id="link1"> <a ></a> </div>
+        <div  class="link" id="link2"> <a  ></a> </div>
+        <div class="link" id="link3"> <a ></a> </div>
+        <div class="link" id="link4"> <a ></a> </div>
+        <div class="link" id="link5"> <a ></a> </div>
+        <div class="link" id="link6"> <a ></a> </div>
+        <div class="link" id="link7"> <a ></a> </div>
       </div>
       <div class="navline-bot">
 
       </div>
     </nav>
-    <div id="Home" class="Hbackgrnd owl-carousel" >
+    <div class="Hbackgrnd sec owl-carousel" >
       <div class="item">
           <video loop muted autoplay id="video">
               <source src="https://drive.google.com/uc?authuser=0&id=1zQWoGWDpq_bMZxTTndW7dJTadCGyWL35&export=download" type="video/mp4" >
@@ -64,11 +70,11 @@
         <span>         </span>
       </div>
     </div>
-    <div style="display:none" onclick="snapscroll('service1')" class="belowbutt" id="dis3">
+    <div style="display:none" class="belowbutt" id="dis3">
       <img src="assets/images/circle.svg">
     </div>
     <div class="sfooter">
-      <div id="service1" class="service">
+      <div id="s1" class="service sec">
         <div class="section1" data-aos="slide-right">
           <div class="secontent1" data-aos-delay="1000"	data-aos="fade-up">
             <div style="text-align:left;"class="sec1head">
@@ -76,7 +82,7 @@
               <div style="width:100%; height:2px; background-color: white; margin-top:2vh;" class="servline">    </div>
             </div>
             <div class="pcontent">
-              <h3 style="margin-top:3vh;">BRAND IDENTITY</h3>
+              <h3 style="margin-top:3vh;">IMAGE EDITING</h3>
             </div>
             <div class="pcarouselbot owl-carousel">
               <div class="pslide"> <img src="assets/images/page3-1.jpg" > </div>
@@ -91,14 +97,14 @@
               <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
             </div> -->
             <div class="pcontentbot">
-              <p>Folio Hawks provides High-end product image editing, photo masking, clipping path and retouching with personalized support that suit every kind of customers. Our services include advance photo masking, color adjustments, image retouching, balancing the brightness and contrast, fashion/beauty retouch and high quality photo compositing of digital images.</p>
+              <p>Folio Hawks provides High-end product image editing, photo masking, clipping path and retouching with personalized support that suit every kind of customers. <br> <br> <br> Our services include advance photo masking, color adjustments, image retouching, balancing the brightness and contrast, fashion/beauty retouch and high quality photo compositing of digital images.<br> <br> <br></p>
               <button type="button" name="button">KNOW MORE</button>
             </div>
-            <div style="width:100%; height:2px; background-color: black; margin-top:55vh;" class="servline">    </div>
           </div>
+          <div style="width:100%; height:2px; background-color: black; position:absolute; bottom: 7vh;" class="servline">    </div>
         </div>
       </div>
-      <div id="service2" class="service">
+      <div class="service sec">
         <div class="insection1" data-aos="slide-left">
           <div class="insecontent1" data-aos-delay="1000"	data-aos="fade-up" >
             <div style="text-align:left;"class="sec1head">
@@ -118,14 +124,16 @@
               <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
             </div> -->
             <div style="left:7vw;"class="pcontentbot">
-              <p>3D modelling and animations is an exceptional line of attack for presenting your product, brand or services with the aid of moving and interactive presentations. To keep your audience engaged and promote your business, at Folio Hawks we offer you with 3D animated models for varied applications be it product modeling, an architectural design, a walk through, building presentations and... just name it!</p>
+              <p>3D modelling and animations is an exceptional line of attack for presenting your product, brand or services with the aid of moving and interactive presentations. <br> <br> <br> </p>
+              <p>To keep your audience engaged and promote your business, at Folio Hawks we offer you with 3D animated models for varied applications be it product modeling, an architectural design, a walk through, building presentations and... <br> <br> <br></p>
+              <p>just name it!</p>
               <button type="button" name="button">KNOW MORE</button>
             </div>
-            <div style="width:100%; height:2px; background-color: black; margin-top:52vh;" class="servline">    </div>
           </div>
+          <div style="width:100%; height:2px; background-color: black; position:absolute; bottom: 7vh;" class="servline">    </div>
         </div>
       </div>
-      <div id="service3" class="service">
+      <div class="service sec">
         <div class="section1" data-aos="slide-right">
           <div class="secontent1" data-aos-delay="1000"	data-aos="fade-up">
             <div style="text-align:left;"class="sec1head">
@@ -145,16 +153,70 @@
               <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
             </div> -->
             <div class="pcontentbot">
+              <p>We believe video has the power to humanize your brand, educate your customers, promote your products, and so much more. <br> <br> <br>It’s not just about having one good explainer video on your homepage. Video, like any marketing effort, is an ongoing strategy. <br> <br> <br>We provide video editing, motion graphics, whiteboard video animations, gif’s & cinemagraphs services at Folio Hawks<br> <br> <br></p>
+              <button type="button" name="button">KNOW MORE</button>
+            </div>
+          </div>
+          <div style="width:100%; height:2px; background-color: black; position:absolute; bottom: 7vh;" class="servline">    </div>
+        </div>
+      </div>
+      <div class="service sec">
+        <div class="insection1" data-aos="slide-left">
+          <div class="insecontent1" data-aos-delay="1000"	data-aos="fade-up" >
+            <div style="text-align:left;"class="sec1head">
+              <h3 style="margin-left:18vw;">BUSINESS PRESENTATIONS</h3>
+              <div style="width:100%; height:2px; background-color: white; margin-top:2vh;" class="servline">    </div>
+            </div>
+            <div class="pcarouselbot owl-carousel">
+              <div class="pslide"> <img src="assets/images/page3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/page3-2.jpg" > </div>
+            </div>
+          </div>
+        </div>
+        <div class="insection2" data-aos="slide-right">
+          <div class="insecontent2" data-aos-delay="1000" data-aos="fade-down">
+            <!-- <div style="margin-left:0;"class="pcarousel owl-carousel">
+              <div class="pslide"> <img src="assets/images/pagew3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
+            </div> -->
+            <div style="left:7vw;"class="pcontentbot">
+              <p>A presentation is an effective way that conveys a thought,or a data in an exact and proficient way. It is likely that the intended interest group would free intrigue. <br> <br> <br> So here is the place we come in, our presentation specialists focus on conveying the data in a way that interfaces with the group of audience immediately. <br> <br> <br> </p>
+              <button type="button" name="button">KNOW MORE</button>
+            </div>
+          </div>
+          <div style="width:100%; height:2px; background-color: black; position:absolute; bottom: 7vh;" class="servline">    </div>
+        </div>
+      </div>
+      <div class="service sec">
+        <div class="section1" data-aos="slide-right">
+          <div class="secontent1" data-aos-delay="1000"	data-aos="fade-up">
+            <div style="text-align:left;"class="sec1head">
+              <h3 style="margin-left:12vw;">SOFTWARE DEVELOPMENT</h3>
+              <div style="width:100%; height:2px; background-color: white; margin-top:2vh;" class="servline">    </div>
+            </div>
+            <div class="pcarouselbot owl-carousel">
+              <div class="pslide"> <img src="assets/images/page3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/page3-2.jpg" > </div>
+            </div>
+          </div>
+        </div>
+        <div class="section2" data-aos="slide-left">
+          <div class="secontent2" data-aos-delay="1000" data-aos="fade-down">
+            <!-- <div class="pcarousel owl-carousel">
+              <div class="pslide"> <img src="assets/images/pagew3-1.jpg" > </div>
+              <div class="pslide"> <img src="assets/images/pagew3-2.jpg" > </div>
+            </div> -->
+            <div class="pcontentbot">
               <p>We believe video has the power to humanize your brand, educate your customers, promote your products, and so much more. It’s not just about having one good explainer video on your homepage. Video, like any marketing effort, is an ongoing strategy. We provide video editing, motion graphics, whiteboard video animations, gif’s & cinemagraphs services at Folio Hawks</p>
               <button type="button" name="button">KNOW MORE</button>
             </div>
-            <div style="width:100%; height:2px; background-color: black; margin-top:52vh;" class="servline">    </div>
           </div>
+          <div style="width:100%; height:2px; background-color: black; position:absolute; bottom: 7vh;" class="servline">    </div>
         </div>
       </div>
     </div>
     <div class="footer">
-      <div class="footersection">
+      <div class="footersection sec">
         <div style="float:left; margin-left: 10vw; text-align:center; display:inline-block;" class="footerleft">
           <i class="fas fa-mobile-alt"></i>
           <p  style="padding-top:1vh;">+091 - 97910 80637</p>
@@ -171,7 +233,7 @@
           <p>Chennai - 600049</p>
         </div>
       </div>
-      <div style="background-color: rgba(40,40,40,1);margin-top:1vh;" class="footerbot">
+      <div style="background-color: rgba(45,45,45,1);margin-top:1vh;" class="footerbot">
         <div style="float:left; margin-left: 7.5vw; text-align:center;" class="footerleft">
           <p>All rights reserved © FolioHawks 2018</p>
         </div>
@@ -185,6 +247,7 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.scrollify.js"></script>
     <script src="assets/js/aos.js"></script>
 
     <script type="text/javascript">
@@ -239,6 +302,11 @@
 
       window.onload = () => {
         document.getElementById('leftnavbar').classList.add("highlight");
+        var sid=localStorage.getItem('serviceid');
+        if(sid==1) {
+          snapscroll('s1');
+          localStorage.clear();
+        }
         setTimeout(function(){
           var element = document.getElementById("leftnavbar");
           element.classList.remove("highlight");
@@ -246,10 +314,58 @@
         }, 2000);
       }
 
-      function myFunction() {
+      $(function() {
+        $.scrollify({
+          section : ".sec",
+        });
+      });
 
-      }
+      $("#link1").click(function(){
+        $.scrollify.move("#1");
+      });
+      $("#dis3").click(function(){
+        $.scrollify.move("#2");
+      });
+      $("#link2").click(function(){
+        $.scrollify.move("#2");
+      });
+      $("#servicebutt").click(function(){
+        $.scrollify.move("#2");
+      });
+      $("#link3").click(function(){
+        $.scrollify.move("#3");
+      });
+      $("#link4").click(function(){
+        $.scrollify.move("#4");
+      });
+      $("#link5").click(function(){
+        $.scrollify.move("#5");
+      });
+      $("#link6").click(function(){
+        $.scrollify.move("#6");
+      });
+      $("#link7").click(function(){
+        $.scrollify.move("#7");
+      });
 
+      $.scrollify({
+        section : ".example-classname",
+        sectionName : "section-name",
+        interstitialSection : "",
+        easing: "easeOutExpo",
+        scrollSpeed: 1100,
+        offset : 0,
+        scrollbars: true,
+        standardScrollElements: "",
+        setHeights: false,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll:true,
+        before:function() {},
+        after:function() {},
+        afterResize:function() {},
+        afterRender:function() {}
+      });
       function showPage() {
 
         document.getElementById("dis1").style.display = "block";
@@ -261,21 +377,6 @@
       AOS.init({
         duration: 1200,
       });
-      // let anchorlinks = document.querySelectorAll('a[href^="#"]')
-      //
-      // for (let item of anchorlinks) {
-      //     console.log(item);
-      //     item.addEventListener('click', (e)=> {
-      // 		let hashval = item.getAttribute('href')
-      // 		let target = document.querySelector(hashval)
-      //     console.log(target);
-      // 		target.scrollIntoView({
-      // 			behavior: 'smooth'
-      // 		})
-      // 		history.pushState(null, null, hashval)
-      // 		e.preventDefault()
-      // 	})
-      // }
 
       var snapscroll = (id) => {
         var target = document.getElementById(id);
