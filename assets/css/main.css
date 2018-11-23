@@ -659,10 +659,7 @@ color: white;
 }
 
 .carouselcontainer {
-  position: relative;
-  top:30%;
-  width: 40vw;
-  margin-left: 5vw;
+
   border: 2px solid white;
 }
 
@@ -685,8 +682,10 @@ color: white;
 }
 
 .pcarouselbot {
-  padding-left: 3.5vw;
-  width:35vw;
+  position: relative;
+  top:30%;
+  padding-left: 5vw;
+  width:40vw;
 }
 
 .pcarousel {
@@ -1111,6 +1110,82 @@ color: white;
   animation-timing-function: linear;
 }
 
+.ballbig {
+    width:20vh;
+    height:20vh;
+    color:white;
+    line-height:50px;
+    font-size:30px;
+    background:#5200cc;
+    border:3px solid #5200cc;
+    border-radius:50%;
+    position:absolute;
+    left:40.5vw;top:180vh;
+}
+
+.ball {
+    width:5vh;
+    height:5vh;
+    color:white;
+    line-height:50px;
+    font-size:30px;
+    background:#5200cc;
+    border:3px solid #5200cc;
+    border-radius:50%;
+    position:absolute;
+    animation: combined 3s linear infinite;
+    -webkit-animation: combined 3s linear infinite;
+    left:0;top:200vh;
+}
+@keyframes combined {
+    16%, 48%, 78%  {
+        top: 195vh;
+        animation-timing-function: ease-out;
+    }
+    32% {
+        top: 180vh;
+        animation-timing-function: ease-in;
+    }
+    62% {
+        top: 185vh;
+        animation-timing-function: ease-in;
+    }
+    90% {
+        top: 187vh;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: rotate(360deg);
+        top: 195vh;
+        animation-timing-function: ease-out;
+        left:43vw;
+    }
+}
+@-webkit-keyframes combined {
+    16%, 48%, 78%  {
+        top: 195vh;
+        -webkit-animation-timing-function: ease-out;
+    }
+    32% {
+        top: 160vh;
+        -webkit-animation-timing-function: ease-in;
+    }
+    62% {
+        top: 165vh;
+        -webkit-animation-timing-function: ease-in;
+    }
+    90% {
+        top: 167vh;
+        -webkit-animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        top: 195vh;
+        -webkit-animation-timing-function: ease-out;
+        left:43vw;
+    }
+}
+
 .briefsection {
   height: 100vh;
   background-image: url(../images/abt_22.gif);
@@ -1210,6 +1285,14 @@ color: white;
 .briefsection {
   height: 550px;
 
+}
+
+.ball {
+  display: none;
+}
+
+.bigball {
+  display: none;
 }
 
 .briefcontent p {
