@@ -198,6 +198,7 @@ text-decoration: none;
 
 } */
 
+
 @media only screen and (max-width: 1200px) {
   #HiddenText {
     padding-left: 0.5vw;
@@ -1082,6 +1083,39 @@ color: white;
 .processection {
   height: 100vh;
   background-color: white;
+}
+
+@media only screen and (max-width: 1200px) {
+
+.homesection {
+  height: 760px;
+}
+
+.briefsection {
+  height: 760px;
+
+}
+
+.trailersection {
+  height: 760px;
+
+}
+
+.detailsection {
+  height: 760px;
+
+}
+
+.tariffslider {
+  height: 760px;
+
+}
+
+.servicesection {
+  height: 760px;
+  
+}
+
 }
 
 .processection .imgcont {
