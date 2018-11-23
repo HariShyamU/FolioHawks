@@ -1073,7 +1073,7 @@ color: white;
 
 .servicesection {
   height: 100vh;
-  background-image: url(../images/abt_7.jpg);
+  background-image: url(../images/abt_77.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1085,9 +1085,9 @@ color: white;
 }
 
 .processection .imgcont {
-  margin-left:50vw;
+  margin-left:40vw;
   transform: translateX(-50%);
-  padding-top: 15vh;
+  padding-top: 5vh;
   height: 30vh;
   width: 50vw;
 }
@@ -1099,7 +1099,7 @@ color: white;
 
 .imgcont1 {
   margin-left: 13vw;
-  padding-top: 13vh;
+  padding-top: 3vh;
 
 }
 
