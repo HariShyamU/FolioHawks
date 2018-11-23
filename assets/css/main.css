@@ -1085,39 +1085,6 @@ color: white;
   background-color: white;
 }
 
-@media only screen and (max-width: 1200px) {
-
-.homesection {
-  height: 800px;
-}
-
-.briefsection {
-  height: 800px;
-
-}
-
-.trailersection {
-  height: 760px;
-
-}
-
-.detailsection {
-  height: 760px;
-
-}
-
-.tariffslider {
-  height: 760px;
-
-}
-
-.servicesection {
-  height: 760px;
-
-}
-
-}
-
 .processection .imgcont {
   margin-left:40vw;
   transform: translateX(-50%);
@@ -1140,4 +1107,48 @@ color: white;
 .imgcont1 img {
   height:80vh;
   width:70vw;
+}
+
+@media only screen and (max-width: 1200px) {
+
+.homesection {
+  height: 800px;
+}
+
+.briefsection {
+  height: 800px;
+
+}
+
+.trailersection {
+  height: 760px;
+
+}
+
+.detailsection {
+  height: 760px;
+
+}
+
+.imgcont1 {
+  margin-left: 10vw;
+  padding-top: 3vh;
+
+}
+
+.imgcont1 img {
+  height:600px;
+  width:70vw;
+}
+
+.tariffslider {
+  height: 760px;
+
+}
+
+.servicesection {
+  height: 760px;
+
+}
+
 }
