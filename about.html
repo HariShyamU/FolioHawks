@@ -28,9 +28,11 @@
 
     <div class="aboutus">
       <div class="homesection">
-
+        <div onclick="snapscroll('sto')" style="cursor: pointer; position: absolute; bottom: 1vh; left:50%; text-align:center; font-size:8vw; color:#9370DB" class="downicon" data-aos-offset="0" data-aos="fade-down">
+          <i class="fas fa-angle-double-down"></i>
+        </div>
       </div>
-      <div class="briefsection">
+      <div id="sto" class="briefsection">
         <div style="padding-top:10vh; padding-left:10vw; width:45vw;" class="briefcontent">
           <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; "> ABOUT US <div style="width:120px; height:1vh; background-color:#9370DB;position: relative; ;border-radius:5px;"class="">       </div></h2>
           <p style="padding-top:10vh;"> FolioHawks is an Integrated creative firm specialised in Image editing, 3D product visualizations, 3D animations, Video editing, motion graphics animations, white board animations, business presentations, graphic designing, Websites, Webapp and standalone software development for all computing platforms. <br> <br> <br> We are creative people from diverse fields who share a common passion for innovation, business building, design and communication in all its expressions. </p>
@@ -41,26 +43,39 @@
       <div class="trailersection">
 
       </div>
-      <div class="processection">
-        <div style="padding-top:10vh; padding-left:10vw;" class="processcontent">
-          <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; text-align: center;"> OUR PROCESS <div style="width:200px; margin: 0 auto; height:1vh; background-color:#9370DB;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
-          <div class="imgcont">
-            <img src="assets/images/abt_4.jpg" alt="">
-          </div>
-        </div>
-
-      </div>
-      <div class="tariffslider">
-        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; padding-top: 5vh; text-align: center;"> OUR TARIFFS <div style="width:170px; margin: 0 auto; height:1vh; background-color:#9370DB;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
-      </div>
       <div class="detailsection">
-        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; text-align: center; padding-top: 3vh;"> HOW WE WORK <div style="width:200px; margin: 0 auto; height:1vh; background-color:#9370DB;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
+        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; text-align: center; padding-top: 3vh;"> OUR PROCESS <div style="width:200px; margin: 0 auto; height:1vh; background-color:#9370DB;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
         <div class="imgcont1">
           <img src="assets/images/abt_6.jpg" alt="">
         </div>
       </div>
+      <div class="tariffslider">
+        <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; padding-top: 5vh; text-align: center;"> OUR TARIFFS <div style="width:170px; margin: 0 auto; height:1vh; background-color:#9370DB;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
+      </div>
       <div class="servicesection">
         <h2 style="font-family: 'Montserrat', sans-serif; font-size: 40px; padding-left: 60vw; padding-top: 10vh;"> SERVICE FEATURES <div style="width:200px; height:1vh; background-color:#9370DB;position: relative;border-radius:5px;"class="">       </div></h2>
+        <div class="servicecontent">
+          <div style="margin-left:60vw; height: 10vw; width:30vw;margin-top:20vh;"class="boxtop">
+            <span style="border-right: 1px solid lightgrey; border-bottom: 1px solid lightgrey; text-align: center; padding-top:6vh;;height:10vw; width:15vw;float: left;" class="box">
+              <i class="far fa-clock"></i>
+              <p style="padding-top:2vh;">24/7 Client Support</p>
+            </span>
+            <span style="border-bottom: 1px solid lightgrey; text-align: center; padding-top:6vh;; height:10vw; width:15vw;float:right;" class="box">
+              <i class="fas fa-users"></i>
+              <p style="padding-top:2vh;">100% Professional Expertise</p>
+            </span>
+          </div>
+          <div style="margin-left:60vw; height: 10vw; width:30vw;"class="boxbot">
+            <span style="border-right: 1px solid lightgrey;text-align: center; padding-top:6vh;; height:10vw; width:15vw;float: left;" class="box">
+              <i class="fas fa-check"></i>
+              <p style="padding-top:2vh;">Quality Service Assured</p>
+            </span>
+            <span style="text-align: center; padding-top:6vh;; height:10vw; width:15vw;float:right;" class="box">
+              <i class="fas fa-globe-americas"></i>
+              <p style="padding-top:2vh;">Global Support</p>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="pfooter">
@@ -100,6 +115,13 @@
     AOS.init({
       duration: 1200,
     })
+
+    var snapscroll = (id) => {
+      var target = document.getElementById(id);
+      target.scrollIntoView ({
+        behavior: 'smooth'
+      })
+    }
     </script>
   </body>
 </html>

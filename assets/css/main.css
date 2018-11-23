@@ -1054,8 +1054,8 @@ color: white;
 }
 
 .trailersection {
-  height:120vh;
-  background-image: url(../images/abt_3.gif);
+  height:100vh;
+  background-image: url(../images/abt_33.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1098,12 +1098,12 @@ color: white;
 }
 
 .imgcont1 {
-  margin-left: 13vw;
+  margin-left: 18vw;
   padding-top: 3vh;
 
 }
 
 .imgcont1 img {
   height:80vh;
-  width:80vw;
+  width:70vw;
 }
