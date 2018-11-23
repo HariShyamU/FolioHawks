@@ -658,12 +658,35 @@ color: white;
   padding-bottom: 8vh;
 }
 
-.pcarouselbot {
+.carouselcontainer {
   position: relative;
   top:30%;
-  width:45vw;
-  padding-left: 5vw;
-  padding-bottom: 5vh;
+  width: 40vw;
+  margin-left: 5vw;
+  border: 2px solid white;
+}
+
+.carouder {
+
+}
+
+.carouselcontainer p {
+  font-size: 3vh;
+  padding-left: 1vh;
+  white-space: pre;
+  float: left;
+  writing-mode:vertical-rl;
+  margin-top: 3vh;
+  transform: rotate(180deg);
+}
+
+.carouselcontainer i{
+
+}
+
+.pcarouselbot {
+  padding-left: 3.5vw;
+  width:35vw;
 }
 
 .pcarousel {
