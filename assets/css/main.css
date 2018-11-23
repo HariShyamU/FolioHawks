@@ -1088,11 +1088,11 @@ color: white;
 @media only screen and (max-width: 1200px) {
 
 .homesection {
-  height: 760px;
+  height: 800px;
 }
 
 .briefsection {
-  height: 760px;
+  height: 800px;
 
 }
 
@@ -1113,7 +1113,7 @@ color: white;
 
 .servicesection {
   height: 760px;
-  
+
 }
 
 }
