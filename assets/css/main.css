@@ -717,7 +717,7 @@ color: white;
   position: relative;
   top:100vh;
   background-color: rgba(25,25,25,1);
-  color: rgba(200,200,200,1);
+  color: rgba(220,220,220,1);
   font-size: 0.8vw;
 }
 
@@ -751,7 +751,7 @@ color: white;
   height: 16vh;
   position: relative;
   background-color: rgba(25,25,25,1);
-  color: rgba(200,200,200,1);
+  color: rgba(180,180,180,1);
   font-size: 0.8vw;
 }
 
@@ -1064,7 +1064,7 @@ color: white;
 
 .tariffslider {
   height:100vh;
-  background-color: yellow;
+  background-color: #5200cc;
 }
 
 .detailsection {
@@ -1169,6 +1169,23 @@ color: white;
 .servicesection {
   height: 760px;
 
+}
+
+.boxtop {
+  padding-top: 48px;
+  width:24px;
+  height:8px;
+}
+
+.boxbot {
+  padding-top: 48px;
+  width:24px;
+  height:8px;
+}
+
+.box {
+  width:12px;
+  height:8px;
 }
 
 }
