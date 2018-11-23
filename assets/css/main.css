@@ -1032,3 +1032,78 @@ color: white;
   max-height: 400px;
   width: 16vw;
 }
+
+.aboutus {
+
+}
+
+.homesection {
+  height: 100vh;
+  background-image: url(../images/abt_1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.briefsection {
+  height: 100vh;
+  background-image: url(../images/abt_22.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.trailersection {
+  height:120vh;
+  background-image: url(../images/abt_3.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.tariffslider {
+  height:100vh;
+  background-color: yellow;
+}
+
+.detailsection {
+  height:100vh;
+  background-color: white;
+}
+
+.servicesection {
+  height: 100vh;
+  background-image: url(../images/abt_7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.processection {
+  height: 100vh;
+  background-color: white;
+}
+
+.processection .imgcont {
+  margin-left:50vw;
+  transform: translateX(-50%);
+  padding-top: 15vh;
+  height: 30vh;
+  width: 50vw;
+}
+
+.imgcont img {
+  height:50vh;
+  width:50vw;
+}
+
+.imgcont1 {
+  margin-left: 13vw;
+  padding-top: 13vh;
+
+}
+
+.imgcont1 img {
+  height:80vh;
+  width:80vw;
+}
