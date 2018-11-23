@@ -1069,7 +1069,10 @@ color: white;
 
 .detailsection {
   height:100vh;
-  background-color: white;
+  background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url(../images/abt_6bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 .servicesection {
