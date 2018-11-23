@@ -1113,6 +1113,10 @@ color: white;
   padding-top:10vh;
 }
 
+.briefcontent {
+  padding-top:10vh; padding-left:10vw; width:45vw;
+}
+
 @media only screen and (max-width: 1200px) {
 
 .homesection {
@@ -1126,6 +1130,10 @@ color: white;
 
 .briefcontent p {
   padding-top:10px;
+}
+
+.briefcontent {
+  padding-top: 20px;
 }
 
 .trailersection {
