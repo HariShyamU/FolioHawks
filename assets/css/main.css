@@ -1119,6 +1119,10 @@ color: white;
 
 @media only screen and (max-width: 1200px) {
 
+.downicon {
+  display: none;
+}
+
 .homesection {
   height: 800px;
 }
