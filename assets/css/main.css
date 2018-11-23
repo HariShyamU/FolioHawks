@@ -1117,6 +1117,18 @@ color: white;
   padding-top:10vh; padding-left:10vw; width:45vw;
 }
 
+.boxtop {
+  margin-left:60vw; height: 10vw; width:30vw;margin-top:20vh;
+}
+
+.box {
+  text-align: center; padding-top:6vh;;height:10vw; width:15vw;
+}
+
+.boxbot {
+  margin-left:60vw; height: 10vw; width:30vw;
+}
+
 @media only screen and (max-width: 1200px) {
 
 .downicon {
@@ -1171,21 +1183,25 @@ color: white;
 
 }
 
+.servicecontent {
+
+}
+
 .boxtop {
-  padding-top: 48px;
-  width:24px;
-  height:8px;
+  margin-top: 24px;
+  width:240px;
+  height:200px;
 }
 
 .boxbot {
-  padding-top: 48px;
-  width:24px;
-  height:8px;
+  width:240px;
+  height:200px;
 }
 
 .box {
-  width:12px;
-  height:8px;
+  padding-top: 48px;
+  width:120px;
+  height:200px;
 }
 
 }
