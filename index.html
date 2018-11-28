@@ -3,186 +3,124 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
   </head>
   <body style="margin:0;">
-
-<!-- <div id="Stats-output">
-</div> -->
-
-<div style="height:100vh; width:100vw; overflow:hidden;" id="WebGL-output">
-</div>
-
-<div style="color:white; position:absolute; top:50vh; left:20vw;" class="geadings">
-  <h1 style="font-family: 'Montserrat', sans-serif;font-weight:100; font-size:4vw;">FOLIO HAWKS</h1>
-  <p style="font-family: 'Montserrat', sans-serif;font-weight:100; font-size:2vw;">Some catchphrase here.</p>
-</div>
-
-<script type="text/javascript" src="three.min.js"></script>
-
-<!-- <script type="text/javascript" src="dat.gui.min.js"></script> -->
-<script src="assets/js/jquery.min.js"></script>
-
-<script type="text/javascript" src="Stats.min.js"></script>
- <script type="text/javascript">
-   // once everything is loaded, we run our Three.js stuff.
-$(function () {
-
-    // var stats = initStats();
-
-    // create a scene, that will hold all our elements such as objects, cameras and lights.
-    var scene = new THREE.Scene();
-
-    // create a camera, which defines where we're looking at.
-    var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-    // create a render and set the size
-    var webGLRenderer = new THREE.WebGLRenderer();
-    webGLRenderer.setClearColor(new THREE.Color(0x000000, 1.0));
-    webGLRenderer.setSize(window.innerWidth, window.innerHeight);
-    webGLRenderer.shadowMapEnabled = true;
+    <style media="screen">
+      body {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
 
 
-    // position and point the camera to the center of the scene
-    camera.position.x = -30;
-    camera.position.y = 40;
-    camera.position.z = 50;
-    camera.lookAt(new THREE.Vector3(10, 0, 0));
-
-    // add the output of the renderer to the html element
-    $("#WebGL-output").append(webGLRenderer.domElement);
-
-    // call the render function
-    var step = 0;
-
-    var knot;
-
-    // setup the control gui
-    var controls = new function () {
-        // we need the first child, since it's a multimaterial
-        this.radius = 40;
-        this.tube = 28.2;
-        this.radialSegments = 600;
-        this.tubularSegments = 12;
-        this.p = 5;
-        this.q = 4;
-        this.heightScale = 4;
-        this.asParticles = true;
-        this.rotate = true;
-
-        this.redraw = function () {
-            // remove the old plane
-            if (knot) scene.remove(knot);
-            // create a new one
-            var geom = new THREE.TorusKnotGeometry(controls.radius, controls.tube, Math.round(controls.radialSegments), Math.round(controls.tubularSegments), Math.round(controls.p), Math.round(controls.q), controls.heightScale);
-
-            if (controls.asParticles) {
-                knot = createParticleSystem(geom);
-            } else {
-                knot = createMesh(geom);
-            }
-
-            // add it to the scene.
-            scene.add(knot);
-        };
-
-    }
-
-    // var gui = new dat.GUI();
-    // gui.add(controls, 'radius', 0, 40).onChange(controls.redraw);
-    // gui.add(controls, 'tube', 0, 40).onChange(controls.redraw);
-    // gui.add(controls, 'radialSegments', 0, 400).step(1).onChange(controls.redraw);
-    // gui.add(controls, 'tubularSegments', 1, 20).step(1).onChange(controls.redraw);
-    // gui.add(controls, 'p', 1, 10).step(1).onChange(controls.redraw);
-    // gui.add(controls, 'q', 1, 15).step(1).onChange(controls.redraw);
-    // gui.add(controls, 'heightScale', 0, 5).onChange(controls.redraw);
-    // gui.add(controls, 'asParticles').onChange(controls.redraw);
-    // gui.add(controls, 'rotate').onChange(controls.redraw);
-    //
-    // gui.close();
-
-    controls.redraw();
-
-    render();
-
-    // from THREE.js examples
-    function generateSprite() {
-
-        var canvas = document.createElement('canvas');
-        canvas.width = 16;
-        canvas.height = 16;
-
-        var context = canvas.getContext('2d');
-        var gradient = context.createRadialGradient(canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2);
-        gradient.addColorStop(0, 'rgba(255,255,255,1)');
-        gradient.addColorStop(0.2, 'rgba(255,255,255,1)');
-        gradient.addColorStop(0.4, 'rgba(0,0,100,1)');
-        gradient.addColorStop(1, 'rgba(0,0,0,1)');
-
-        context.fillStyle = gradient;
-        context.fillRect(0, 0, canvas.width, canvas.height);
-
-        var texture = new THREE.Texture(canvas);
-        texture.needsUpdate = true;
-        return texture;
-
-    }
-
-    function createParticleSystem(geom) {
-        var material = new THREE.ParticleBasicMaterial({
-            color: 0xcccccc,
-            size: 3,
-            transparent: true,
-            blending: THREE.AdditiveBlending,
-            map: generateSprite()
-        });
-
-        var system = new THREE.ParticleSystem(geom, material);
-        system.sortParticles = true;
-        return system;
-    }
-
-    function createMesh(geom) {
-
-        // assign two materials
-        var meshMaterial = new THREE.MeshNormalMaterial({});
-        meshMaterial.side = THREE.DoubleSide;
-
-        // create a multimaterial
-        var mesh = THREE.SceneUtils.createMultiMaterialObject(geom, [meshMaterial]);
-
-        return mesh;
-    }
-
-    function render() {
-        // stats.update();
-
-        if (controls.rotate) {
-            knot.rotation.y = step += 0.01;
-        }
-
-        // render using requestAnimationFrame
-        requestAnimationFrame(render);
-        webGLRenderer.render(scene, camera);
-    }
-
-    function initStats() {
-
-        // var stats = new Stats();
-        // stats.setMode(0); // 0: fps, 1: ms
-        //
-        // // Align top-left
-        // stats.domElement.style.position = 'absolute';
-        // stats.domElement.style.left = '0px';
-        // stats.domElement.style.top = '0px';
-        //
-        // $("#Stats-output").append(stats.domElement);
-        //
-        // return stats;
-    }
-});
-
- </script>
+    <script src="three.min.js"> </script>
   </body>
+  <script type="text/javascript">
+  var scene = new THREE.Scene();
+
+  /**
+  * Camera
+  **/
+
+  // Specify the portion of the scene visiable at any time (in degrees)
+  var fieldOfView = 75;
+
+  // Specify the camera's aspect ratio
+  var aspectRatio = window.innerWidth / window.innerHeight;
+
+  // Specify the near and far clipping planes. Only objects
+  // between those planes will be rendered in the scene
+  // (these values help control the number of items rendered
+  // at any given time)
+  var nearPlane = 0.1;
+  var farPlane = 1000;
+
+  // Use the values specified above to create a camera
+  var camera = new THREE.PerspectiveCamera(
+    fieldOfView, aspectRatio, nearPlane, farPlane
+  );
+
+  // Finally, set the camera's position in the z-dimension
+  camera.position.z = 5;
+
+  /**
+  * Renderer
+  **/
+
+  // Create the canvas with a renderer
+  var renderer = new THREE.WebGLRenderer({antialias: true});
+
+  // Specify the size of the canvas
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+  // Add the canvas to the DOM
+  document.body.appendChild( renderer.domElement );
+
+  /**
+  * Image
+  **/
+
+  // Create a texture loader so we can load our image file
+  var loader = new THREE.TextureLoader();
+
+  // Load an image file into a custom material
+  var material = new THREE.MeshLambertMaterial({
+    // map: loader.load('eye.png')
+    color: 0xff0000,
+    wireframe:true
+  });
+
+  // create a plane geometry for the image with a width of 10
+  // and a height that preserves the image's aspect ratio
+  var geometry = new THREE.SphereGeometry(1, 16, 16);
+
+  // combine our image geometry and material into a mesh
+  var mesh = new THREE.Mesh(geometry, material);
+
+  // set the position of the image mesh in the x,y,z dimensions
+  mesh.position.set(0,0,0)
+
+  // add the image to the scene
+  scene.add(mesh);
+
+  /**
+  * Lights
+  **/
+
+  // Add a point light with #fff color, .7 intensity, and 0 distance
+  var light = new THREE.PointLight( 0xffffff, 0.7, 0 );
+
+  // Specify the light's position
+  light.position.set(100, 100, 100 );
+
+  // Add the light to the scene
+  scene.add(light)
+
+  // window.addEventListener("mousemove", onmousemove, false);
+  //
+  // var plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+  // var raycaster = new THREE.Raycaster();
+  // var mouse = new THREE.Vector2();
+  // var intersectPoint = new THREE.Vector3();
+
+  function onmousemove(event) {
+    // raycaster.setFromCamera(mouse, camera);
+    // raycaster.ray.intersectPlane(plane, intersectPoint);
+    // mesh.lookAt(intersectPoint);
+  }
+
+  /**
+  * Render!
+  **/
+
+  // The main animation function that re-renders the scene each animation frame
+  render();
+
+  function render() {
+    mesh.rotation.y+=0.01;
+    requestAnimationFrame(render);
+    renderer.render(scene, camera);
+  }
+  </script>
 </html>
