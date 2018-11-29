@@ -10,117 +10,157 @@
         height: 100vh;
         width: 100%;
         overflow: hidden;
+        background-color: black;
+      }
+
+      #scene {
+          margin-top: 5vh;
+          margin-left: 3vw;
+      }
+
+      .circle1 {
+        display: block;
+        position: absolute;
+        top:10vh;
+        left:20vw;
+        background: black;
+        border-radius: 100%;
+        height: 9vw;
+        width: 9vw;
+        margin: 0;
+        background: radial-gradient(circle at 10px 10px, #ffA500, #ff00ff);
+      }
+      .circle5 {
+        display: block;
+        position: absolute;
+        top:50vh;
+        left:15vw;
+        background: black;
+        border-radius: 100%;
+        height: 12vw;
+        width: 12vw;
+        margin: 0;
+        background: radial-gradient(circle at 50px 50px, #ffA500, #ff00ff);
+      }
+      .circle6 {
+        display: block;
+        position: absolute;
+        top:70vh;
+        left:50vw;
+        background: black;
+        border-radius: 100%;
+        height: 5vw;
+        width: 5vw;
+        margin: 0;
+        background: radial-gradient(circle at 10px 10px, #ffA500, #ff00ff);
+      }
+
+      .circle2 {
+        display: block;
+        position: absolute;
+        top:25vh;
+        left:32vw;
+        background: black;
+        border-radius: 100%;
+        height: 20vw;;
+        width: 20vw;
+        margin: 0;
+        background: radial-gradient(circle at 50px 50px, #ffA500, #ff00ff);
+      }
+      .circle3 {
+        display: block;
+        background: black;
+        position: absolute;
+        top:28vh;
+        left:40vw;
+        border-radius: 100%;
+        height: 15vw;;
+        width: 15vw;
+        margin: 0;
+        background: radial-gradient(circle at 50px 50px, #ffA500, #ff00ff);
+      }
+      .circle4 {
+        display: block;
+        position: absolute;
+        top:15vh;
+        left:80vw;
+        background: black;
+        border-radius: 100%;
+        height: 12vw;;
+        width: 12vw;
+        margin: 0;
+        background: radial-gradient(circle at 10px 10px, #ff00ff, #000000);
+      }
+      .circle7 {
+        display: block;
+        position: absolute;
+        top:52vh;
+        left:70vw;
+        background: black;
+        border-radius: 100%;
+        height: 20vw;
+        width: 20vw;
+        margin: 0;
+        background: radial-gradient(circle at 10px 10px, #ff00ff, #000000);
+      }
+      .circle8 {
+        display: block;
+        position: absolute;
+        top:45vh;
+        left:35vw;
+        background: black;
+        border-radius: 100%;
+        height: 10vw;
+        width: 10vw;
+        margin: 0;
+        background: radial-gradient(circle at 10px 10px, #ff00ff, #000000);
+      }
+      .circle9 {
+        display: block;
+        position: absolute;
+        top:8vh;
+        left:15vw;
+        background: black;
+        border-radius: 100%;
+        height: 5vw;
+        width: 5vw;
+        margin: 0;
+        background: radial-gradient(circle at 1px 1px, #ff00ff, #000000);
+      }
+      .circle0 {
+        display: block;
+        position: absolute;
+        top:55vh;
+        left:10vw;
+        background: black;
+        border-radius: 100%;
+        height: 7vw;
+        width: 7vw;
+        margin: 0;
+        background: radial-gradient(circle at 1px 1px, #ff00ff, #000000);
       }
     </style>
 
+      <div id="scene">
+        <div data-depth="0.2"> <figure class="circle9">       </figure> </div>
+        <div data-depth="0.3"> <figure class="circle1">       </figure> </div>
+        <div data-depth="0.3"> <figure class="circle2">       </figure> </div>
+        <div data-depth="0.2"> <figure class="circle8">       </figure> </div>
+        <div data-depth="0.1"> <figure class="circle3">       </figure> </div>
+        <div data-depth="0.2"> <figure class="circle4">       </figure> </div>
+        <div data-depth="0.2"> <figure class="circle0">       </figure> </div>
+        <div data-depth="0.3"> <figure class="circle5">       </figure> </div>
+        <div data-depth="0.3"> <figure class="circle6">       </figure> </div>
+        <div data-depth="0.2"> <figure class="circle7">       </figure> </div>
+        <div data-depth="0.6">TITLE</div>
+      </div>
 
-    <script src="three.min.js"> </script>
+
+
   </body>
+  <script src="parallax.min.js"> </script>
   <script type="text/javascript">
-  var scene = new THREE.Scene();
-
-  /**
-  * Camera
-  **/
-
-  // Specify the portion of the scene visiable at any time (in degrees)
-  var fieldOfView = 75;
-
-  // Specify the camera's aspect ratio
-  var aspectRatio = window.innerWidth / window.innerHeight;
-
-  // Specify the near and far clipping planes. Only objects
-  // between those planes will be rendered in the scene
-  // (these values help control the number of items rendered
-  // at any given time)
-  var nearPlane = 0.1;
-  var farPlane = 1000;
-
-  // Use the values specified above to create a camera
-  var camera = new THREE.PerspectiveCamera(
-    fieldOfView, aspectRatio, nearPlane, farPlane
-  );
-
-  // Finally, set the camera's position in the z-dimension
-  camera.position.z = 5;
-
-  /**
-  * Renderer
-  **/
-
-  // Create the canvas with a renderer
-  var renderer = new THREE.WebGLRenderer({antialias: true});
-
-  // Specify the size of the canvas
-  renderer.setSize( window.innerWidth, window.innerHeight );
-
-  // Add the canvas to the DOM
-  document.body.appendChild( renderer.domElement );
-
-  /**
-  * Image
-  **/
-
-  // Create a texture loader so we can load our image file
-  var loader = new THREE.TextureLoader();
-
-  // Load an image file into a custom material
-  var material = new THREE.MeshLambertMaterial({
-    // map: loader.load('eye.png')
-    color: 0xff0000,
-    wireframe:true
-  });
-
-  // create a plane geometry for the image with a width of 10
-  // and a height that preserves the image's aspect ratio
-  var geometry = new THREE.SphereGeometry(1, 16, 16);
-
-  // combine our image geometry and material into a mesh
-  var mesh = new THREE.Mesh(geometry, material);
-
-  // set the position of the image mesh in the x,y,z dimensions
-  mesh.position.set(0,0,0)
-
-  // add the image to the scene
-  scene.add(mesh);
-
-  /**
-  * Lights
-  **/
-
-  // Add a point light with #fff color, .7 intensity, and 0 distance
-  var light = new THREE.PointLight( 0xffffff, 0.7, 0 );
-
-  // Specify the light's position
-  light.position.set(100, 100, 100 );
-
-  // Add the light to the scene
-  scene.add(light)
-
-  // window.addEventListener("mousemove", onmousemove, false);
-  //
-  // var plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
-  // var raycaster = new THREE.Raycaster();
-  // var mouse = new THREE.Vector2();
-  // var intersectPoint = new THREE.Vector3();
-
-  function onmousemove(event) {
-    // raycaster.setFromCamera(mouse, camera);
-    // raycaster.ray.intersectPlane(plane, intersectPoint);
-    // mesh.lookAt(intersectPoint);
-  }
-
-  /**
-  * Render!
-  **/
-
-  // The main animation function that re-renders the scene each animation frame
-  render();
-
-  function render() {
-    mesh.rotation.y+=0.01;
-    requestAnimationFrame(render);
-    renderer.render(scene, camera);
-  }
+  var scene = document.getElementById('scene');
+  var parallaxInstance = new Parallax(scene);
   </script>
 </html>
