@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="assets/css/aos.css"/>
   </head>
   <body style="margin:0;">
     <style media="screen">
@@ -10,7 +11,7 @@
         height: 100vh;
         width: 100%;
         overflow: hidden;
-        background-color: black;
+        background-color: #0A000A;
       }
 
       #scene {
@@ -29,6 +30,8 @@
         width: 9vw;
         margin: 0;
         background: radial-gradient(circle at 10px 10px, #ffA500, #ff00ff);
+        -webkit-animation: moveleft 3s infinite  normal ease-out;
+          animation: moveleft 3s infinite  normal ease-out;
       }
       .circle5 {
         display: block;
@@ -41,6 +44,8 @@
         width: 12vw;
         margin: 0;
         background: radial-gradient(circle at 50px 50px, #ffA500, #ff00ff);
+        -webkit-animation: movebotright 3s infinite  normal ease-out;
+          animation: movebotright 3s infinite  normal ease-out;
       }
       .circle6 {
         display: block;
@@ -53,6 +58,8 @@
         width: 5vw;
         margin: 0;
         background: radial-gradient(circle at 10px 10px, #ffA500, #ff00ff);
+        -webkit-animation: movebot 3s infinite  normal ease-out;
+          animation: movebot 3s infinite  normal ease-out;
       }
 
       .circle2 {
@@ -66,6 +73,8 @@
         width: 20vw;
         margin: 0;
         background: radial-gradient(circle at 50px 50px, #ffA500, #ff00ff);
+        -webkit-animation: movebot 3s infinite  normal ease-out;
+          animation: movebot 3s infinite  normal ease-out;
       }
       .circle3 {
         display: block;
@@ -78,6 +87,8 @@
         width: 15vw;
         margin: 0;
         background: radial-gradient(circle at 50px 50px, #ffA500, #ff00ff);
+        -webkit-animation: moveleft 3s infinite  normal ease-out;
+          animation: moveleft 3s infinite  normal ease-out;
       }
       .circle4 {
         display: block;
@@ -89,7 +100,9 @@
         height: 12vw;;
         width: 12vw;
         margin: 0;
-        background: radial-gradient(circle at 10px 10px, #ff00ff, #000000);
+        background: radial-gradient(circle 10vw at 1px 1px, #6C006C, #000000);
+        -webkit-animation: moveright 3s infinite  normal ease-out;
+          animation: moveright 3s infinite  normal ease-out;
       }
       .circle7 {
         display: block;
@@ -101,7 +114,9 @@
         height: 20vw;
         width: 20vw;
         margin: 0;
-        background: radial-gradient(circle at 10px 10px, #ff00ff, #000000);
+        background: radial-gradient(circle 10vw at 1px 1px, #6C006C, #000000);
+        -webkit-animation: movebotright1 3s infinite  normal ease-out;
+          animation: movebotright1 3s infinite  normal ease-out;
       }
       .circle8 {
         display: block;
@@ -113,7 +128,9 @@
         height: 10vw;
         width: 10vw;
         margin: 0;
-        background: radial-gradient(circle at 10px 10px, #ff00ff, #000000);
+        background: radial-gradient(circle 10vw at 1px 1px, #6C006C, #000000);
+        -webkit-animation: movetopleft 3s infinite  normal ease-out;
+          animation: movetopleft 3s infinite  normal ease-out;
       }
       .circle9 {
         display: block;
@@ -125,7 +142,9 @@
         height: 5vw;
         width: 5vw;
         margin: 0;
-        background: radial-gradient(circle at 1px 1px, #ff00ff, #000000);
+        background: radial-gradient(circle 5vw at 1px 1px, #6C006C, #000000);
+        -webkit-animation: moveright 3s infinite  normal ease-out;
+          animation: moveright 3s infinite  normal ease-out;
       }
       .circle0 {
         display: block;
@@ -137,8 +156,123 @@
         height: 7vw;
         width: 7vw;
         margin: 0;
-        background: radial-gradient(circle at 1px 1px, #ff00ff, #000000);
-      }
+        background: radial-gradient(circle 5vw at 1px 1px, #6C006C, #000000);
+        position: relative;
+        -webkit-animation: moveup 3s infinite  normal ease-out;
+          animation: moveup 3s infinite  normal ease-out;
+        }
+        @-webkit-keyframes moveup {
+          0% {
+            transform: translateY(100%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        @keyframes moveup {
+          0% {
+            transform: translateY(100%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        @-webkit-keyframes movebot {
+          0% {
+            transform: translateY(-10%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        @keyframes movebot {
+          0% {
+            transform: translateY(-10%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+        @-webkit-keyframes moveright {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        @keyframes moveright {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        @-webkit-keyframes moveleft {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        @keyframes moveleft {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        @keyframes movetopleft {
+          0% {
+            transform: translate(50%, 50%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
+        @-webkit-keyframes movetopleft {
+          0% {
+            transform: translate(50%, 50%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
+        @keyframes movebotright {
+          0% {
+            transform: translate(-50%, -50%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
+        @-webkit-keyframes movebotright {
+          0% {
+            transform: translate(-50%, -50%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
+        @keyframes movebotright1 {
+          0% {
+            transform: translate(-20%, -20%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
+        @-webkit-keyframes movebotright1 {
+          0% {
+            transform: translate(-20%, -20%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
     </style>
 
       <div id="scene">
@@ -158,9 +292,12 @@
 
 
   </body>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
   <script src="parallax.min.js"> </script>
   <script type="text/javascript">
-  var scene = document.getElementById('scene');
-  var parallaxInstance = new Parallax(scene);
+  AOS.init({
+    duration: 3000,
+  })
   </script>
 </html>
