@@ -429,7 +429,7 @@
         .title {
           color:white;
           position: absolute;
-          top:5vw;
+          top:15vh;
           left:calc(33vw - ((50vw - 50%)/2));
           -webkit-animation: moveupop 3s infinite  normal ease-out;
             animation: moveupop 3s infinite  normal ease-out;
@@ -439,6 +439,10 @@
         .title h1 {
           text-align: center;
           font-size: 10vw;
+        }
+        .headerland {
+          color:white;
+          z-index: 2;
         }
     </style>
     <div class="landcarousel owl-carousel">
@@ -458,12 +462,12 @@
         <div data-depth="0.2"> <figure class="circle7">       </figure> </div>
         <div data-depth="0.6" class="title"> <h1>FOLIO<br>HAWKS</h1> </div>
       </div>
-      <div class="secondpage">
-        <div class="scene2">
+      <div id="parscene" class="secondpage">
+        <div data-depth="0.2" class="headerland"> <h1 style="position: absolute;top:40vh;left: 10vw;"> HEADER TITLE HERE</h1> <p style="position: absolute;top:50vh;left: 10vw;">SOME RANDOM TEXT HERE</p>        </div>
+        <div data-depth="0.3" class="scene2">
           <div class=""> <figure class="circle_1">          </figure>          </div>
           <div class=""> <figure class="circle_2">          </figure>         </div>
           <div class=""> <figure class="circle_3">          </figure>         </div>
-          <div class="">          </div>
           <div class="">          </div>
         </div>
       </div>
@@ -475,7 +479,6 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/jquery.min.js"></script>
   <script src="parallax.min.js"> </script>
-  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
   <script type="text/javascript">
 
@@ -488,9 +491,11 @@
         nav: false,
         animateOut: 'fadeOut'
     });
-    // setTimeout(function(){ owl.trigger('next.owl.carousel'); console.log('test'); }, 3500);
+    setTimeout(function(){ owl.trigger('next.owl.carousel'); console.log('test'); }, 3500);
   });
 
+  var scene = document.getElementById('parscene');
+  var parallax = new Parallax(scene);
 
   AOS.init({
     duration: 2000,
