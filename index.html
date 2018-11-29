@@ -249,6 +249,26 @@
             transform: translateY(0);
           }
         }
+        @-webkit-keyframes moveupop {
+          0% {
+            transform: translateY(50%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        @keyframes moveupop {
+          0% {
+            transform: translateY(50%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
         @-webkit-keyframes movebot {
           0% {
             transform: translateY(-10%);
@@ -345,15 +365,87 @@
             transform: translate(0%,0%)
           }
         }
+        @keyframes opacni {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @-webkit-@keyframes opacni {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
         .landcarousel {
           height:100vh;
         }
         #scene {
           height: 100vh;
         }
+        .line {
+          position: relative;
+          left: -115%;
+          width: 300%;
+          height: 1px;
+          background-color: white;
+          -webkit-transform: rotate(-55deg); /* Safari and Chrome */
+              -ms-transform: rotate(-55deg); /* IE 9 */
+                  transform: rotate(-55deg);
+                  -webkit-animation: opcani 3s infinite  normal ease-out;
+                    animation: opacni 3s infinite  normal ease-out;
+                    animation-iteration-count: 1;
+        }
+        .line2 {
+          position: relative;
+          left: -112%;
+          width: 300%;
+          height: 1px;
+          background-color: white;
+          -webkit-transform: rotate(-55deg); /* Safari and Chrome */
+              -ms-transform: rotate(-55deg); /* IE 9 */
+                  transform: rotate(-55deg);
+                  -webkit-animation: opcani 3s infinite  normal ease-out;
+                    animation: opacni 3s infinite  normal ease-out;
+                    animation-iteration-count: 1;
+        }
+        .line3 {
+          position: relative;
+          left: -109%;
+          width: 300%;
+          height: 1px;
+          background-color: white;
+          -webkit-transform: rotate(-55deg); /* Safari and Chrome */
+              -ms-transform: rotate(-55deg); /* IE 9 */
+                  transform: rotate(-55deg);
+                  -webkit-animation: opcani 3s infinite  normal ease-out;
+                    animation: opacni 3s infinite  normal ease-out;
+                    animation-iteration-count: 1;
+        }
+        .title {
+          color:white;
+          position: absolute;
+          top:5vw;
+          left:calc(33vw - ((50vw - 50%)/2));
+          -webkit-animation: moveupop 3s infinite  normal ease-out;
+            animation: moveupop 3s infinite  normal ease-out;
+            animation-iteration-count: 1;
+        }
+
+        .title h1 {
+          text-align: center;
+          font-size: 10vw;
+        }
     </style>
     <div class="landcarousel owl-carousel">
       <div id="scene">
+        <div class="line">        </div>
+        <div class="line2">        </div>
+        <div class="line3">        </div>
         <div data-depth="0.2"> <figure class="circle9">       </figure> </div>
         <div data-depth="0.3"> <figure class="circle1">       </figure> </div>
         <div data-depth="0.3"> <figure class="circle2">       </figure> </div>
@@ -364,7 +456,7 @@
         <div data-depth="0.3"> <figure class="circle5">       </figure> </div>
         <div data-depth="0.3"> <figure class="circle6">       </figure> </div>
         <div data-depth="0.2"> <figure class="circle7">       </figure> </div>
-        <div data-depth="0.6">TITLE</div>
+        <div data-depth="0.6" class="title"> <h1>FOLIO<br>HAWKS</h1> </div>
       </div>
       <div class="secondpage">
         <div class="scene2">
@@ -396,12 +488,12 @@
         nav: false,
         animateOut: 'fadeOut'
     });
-    setTimeout(function(){ owl.trigger('next.owl.carousel'); console.log('test'); }, 3500);
+    // setTimeout(function(){ owl.trigger('next.owl.carousel'); console.log('test'); }, 3500);
   });
 
 
   AOS.init({
-    duration: 3000,
+    duration: 2000,
   })
   </script>
 </html>
