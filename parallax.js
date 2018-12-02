@@ -565,7 +565,7 @@ var Parallax = function () {
       frictionY: helpers.data(this.element, 'friction-y'),
       originX: helpers.data(this.element, 'origin-x'),
       originY: helpers.data(this.element, 'origin-y'),
-      pointerEvents: helpers.data(this.element, 'pointer-events'),
+      // pointerEvents: helpers.data(this.element, 'pointer-events'),
       precision: helpers.data(this.element, 'precision'),
       relativeInput: helpers.data(this.element, 'relative-input'),
       clipRelativeInput: helpers.data(this.element, 'clip-relative-input'),
@@ -662,7 +662,7 @@ var Parallax = function () {
 
       // Pointer events
       if (!this.pointerEvents) {
-        this.element.style.pointerEvents = 'none';
+        this.element.style.pointerEvents = 'auto';
       }
 
       // Setup

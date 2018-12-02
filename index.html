@@ -443,10 +443,10 @@
         }
         .headerland {
           color:white;
-          z-index: 2;
         }
-        .homebutt a{
+        .secondpage {
           pointer-events: auto !important;
+          z-index:99999;
         }
     </style>
     <div class="landcarousel owl-carousel">
@@ -466,16 +466,17 @@
         <div > <figure class="circle7">       </figure> </div>
         <div class="title"> <h1 style="font-family: 'Montserrat', sans-serif;">FOLIO<br>HAWKS</h1> </div>
       </div>
-      <div id="parscene" style="" class="secondpage">
-        <div data-depth="0.2" class="headerland"> <h1 style="font-family: 'Montserrat', sans-serif;position: absolute;top:40vh;left: 10vw;"> HEADER TITLE HERE</h1> <p style="font-family: 'Montserrat', sans-serif;position: absolute;top:50vh;left: 10vw;">SOME RANDOM TEXT HERE</p>  <img style="width:45vw; height:45vw; position: absolute; top:5vh; left:40vw; " src="laptop.png" alt="">      </div>
-        <div data-depth="0.2" style="" onclick="window.location='home.html'" class="homebutt">
-          <a style="position:relative; top: 60vh; left:20vw; color:white; z-index:50;" href="home.html"> Go to Site </a>
-        </div>
-        <div class="scene2">
-          <div class=""> <figure class="circle_1">          </figure>          </div>
-          <div class=""> <figure class="circle_2">          </figure>         </div>
-          <div class=""> <figure class="circle_3">          </figure>         </div>
-          <div class="">          </div>
+      <div style="" class="secondpage">
+
+        <div id="parscene">
+          <div data-depth="0.2" class="headerland"> <h1 style="font-family: 'Montserrat', sans-serif;position: absolute;top:40vh;left: 10vw;"> HEADER TITLE HERE</h1> <p style="font-family: 'Montserrat', sans-serif;position: absolute;top:50vh;left: 10vw;">SOME RANDOM TEXT HERE</p> <a style="position:absolute; top: 60vh; left:20vw; color:white;" href="home.html"> Go to Site </a> <img style="width:45vw; height:45vw; position: absolute; top:5vh; left:40vw; " src="laptop.png" alt="">      </div>
+          <div class="scene2">
+            <div class=""> <figure class="circle_1">          </figure>          </div>
+            <div class=""> <figure class="circle_2">          </figure>         </div>
+            <div class=""> <figure class="circle_3">          </figure>         </div>
+            <div class="">          </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -496,12 +497,18 @@
         loop:false,
         dots: false,
         nav: false,
-        animateOut: 'fadeOut',
         touchDrag : false,
         mouseDrag : false
     });
-    setTimeout(function(){ owl.trigger('next.owl.carousel'); console.log('test'); }, 5000);
+    setTimeout(function(){ owl.trigger('to.owl.carousel', 1); console.log('test'); }, 5000);
   });
+
+  $("document").ready(function() {
+    setTimeout(function() {
+        $("title").trigger('click');
+        console.log('done');
+    },1000);
+});
 
   var scene = document.getElementById('parscene');
   var parallax = new Parallax(scene);
