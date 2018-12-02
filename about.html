@@ -12,18 +12,18 @@
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navigation-bar" data-aos="slide-right">
+    <nav id="leftnavbar" class="navigation-bar" data-aos="slide-right">
         <a class="logo"style="padding:10px 0px 8px 5px; margin-bottom: 1vh;" href="index.html"> <img src="assets/images/newlogo.png" alt="">  <div style="padding-left:22px; font-size:20px;"></div> </a>
         <div class="navline1-top">        </div>
+        <a class="navbutt" href="home.html"> <i class="fas fa-home"></i> <div id="HiddenText"><p>Home</p></div> </a>
         <a class="navbutt" href="about.html"> <i class="fas fa-address-card"></i> <div id="HiddenText"><p>About Us</p></div> </a>
         <a class="navbutt"href="pf.html"> <i class="far fa-images"></i> <div id="HiddenText"><p>PortFolio</p></div> </a>
-        <a class="navbutt"href=""> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
-        <a class="navbutt" style="margin-bottom: 2vh;" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
+        <a style="cursor:pointer;" onclick="servicedata(1)" class="navbutt"> <i class="fas fa-certificate"></i> <div id="HiddenText"><p>Services</p></div> </a>
+        <a class="navbutt" id="lastbutt" href="contact.html"> <i class="fas fa-headset"></i> <div id="HiddenText"><p>Contact Us</p></div> </a>
         <div class="navline1-bot">        </div>
         <a class="navbutt" href="Portfolio"> <i class="fab fa-facebook-square"></i> <div id="HiddenText"><p>Facebook</p></div> </a>
-        <a class="navbutt" style="margin-bottom: 2vh;" href="Portfolio"> <i class="fab fa-linkedin-in"></i> <div id="HiddenText"><p>LinkedIn</p></div> </a>
+        <a class="navbutt" id="lastbutt" href="Portfolio"> <i class="fab fa-linkedin-in"></i> <div id="HiddenText"><p>LinkedIn</p></div> </a>
         <div class="navlinelow-bot" >        </div>
-
     </nav>
 
     <div class="aboutus">
@@ -126,6 +126,11 @@
       target.scrollIntoView ({
         behavior: 'smooth'
       })
+    }
+
+    var servicedata = (serviceid) => {
+      localStorage.setItem("serviceid", serviceid);
+      window.location = "./home.html"
     }
     </script>
   </body>
