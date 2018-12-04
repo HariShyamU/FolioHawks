@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" type="text/css" href="slick.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/aos.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
@@ -28,7 +27,7 @@
 
     <div class="aboutus">
       <div class="homesection">
-        <div onclick="snapscroll('sto')" style="cursor: pointer; position: absolute; bottom: 1vh; left:50%; transform: translatex(-50%); font-size:6vw; color:#5200cc" class="downicon" data-aos-offset="0" data-aos="fade-down">
+        <div onclick="snapscroll('sto')" style="cursor: pointer; position: absolute; bottom: 1vh; left:45vw;  font-size:3vw; color:#5200cc" class="downicon" data-aos-offset="0" data-aos="fade-down">
           <i class="fas fa-angle-double-down"></i>
         </div>
       </div>
@@ -54,8 +53,64 @@
           <img src="assets/images/abt_66.png" alt="">
         </div>
       </div>
-      <div class="tariffslider">
-        <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 2px; color: white;font-size: 40px; padding-top: 5vh; text-align: center;"> OUR TARIFFS <div style="width:160px; margin: 0 auto; height:0.5vh; background-color:black;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
+      <div style=" overflow:hidden;" class="tariffslider">
+        <div class="backvid">
+          <video style="position: absolute; top:400vh; width: calc(100vw - ((100vw - 100%))); z-index:-1;" loop muted autoplay id="video">
+              <source src="low.m4v" type="video/mp4" >
+          </video>
+        </div>
+        <h2 style="z-index: 2;font-family: 'Playfair Display', serif; letter-spacing: 2px; color: white;font-size: 40px; padding-top: 5vh; text-align: center;"> OUR TARIFFS <div style="width:160px; margin: 0 auto; height:0.5vh; background-color:#5200cc;position: relative; right: 50px;border-radius:5px;"class="">       </div></h2>
+        <div class="tariffcontent">
+          <div class="tariffcont">
+            <div style="width:20vw; height:70vh; float:left; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont1">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont2">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont3">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="tariffcont">
+            <div style="width:20vw; height:70vh; float:left; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont1">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont2">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont3">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="tariffcont">
+            <div style="width:20vw; height:70vh; float:left; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont1">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont2">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont3">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="tariffcont">
+            <div style="width:20vw; height:70vh; float:left; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont1">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont2">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+            <div style="width:20vw; height:70vh; background-color:white; margin-left:10vw; margin-top:5vh; display:inline-block;" class="cont3">
+              <img style="width:20vw; height:25vh; opacity: 0.3;" src="tariff.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+
       </div>
       <div class="servicesection">
         <h2 style="font-family: 'Playfair Display', serif; letter-spacing: 2px; font-size: 40px; padding-left: 60vw; padding-top: 10vh;"> SERVICE FEATURES <div style="width:200px; height:0.5vh; background-color:#5200cc;position: relative;border-radius:5px;"class="">       </div></h2>
@@ -112,14 +167,24 @@
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="slick.min.js"></script>
     <script src="assets/js/aos.js"></script>
-    <script src="assets/js/jquery.justifiedGallery.min.js"></script>
 
     <script type="text/javascript">
     AOS.init({
       duration: 1200,
     })
+
+    $(document).ready(function(){
+      $('.tariffcontent').slick({
+        slidesToShow: 1,
+        arrows: true,
+        prevArrow: '<img style="cursor:pointer;" class="tarprev" src="assets/images/left.png">',
+        nextArrow: '<img style="cursor:pointer;" class="tarnext" src="assets/images/right.png">'
+
+
+      });
+    });
 
     var snapscroll = (id) => {
       var target = document.getElementById(id);

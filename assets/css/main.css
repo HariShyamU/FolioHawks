@@ -839,7 +839,16 @@ color: white;
 .imgallery a{
   display: inline-block;
   width: 29vw;
-  padding-left:1vw;
+  height:30vh;
+  padding-right:1vw;
+  margin-bottom: 2vh;
+}
+
+.imgallery img{
+  display: inline-block;
+  width: 29vw;
+  height:30vh;
+  padding-right:1vw;
   margin-bottom: 2vh;
 }
 
@@ -860,6 +869,15 @@ color: white;
 
 .contentgallery a{
   display: inline-block;
+  height:30vh;
+  width: 29vw;
+  padding-left:1vw;
+  margin-bottom: 2vh;
+}
+
+.contentgallery img{
+  display: inline-block;
+  height:30vh;
   width: 29vw;
   padding-left:1vw;
   margin-bottom: 2vh;
@@ -1204,7 +1222,26 @@ color: white;
 
 .tariffslider {
   height:100vh;
-  background-color: #5200cc;
+}
+
+.tarprev {
+    width: 2vw;
+    height:auto;
+    position: absolute;
+    top: 40vh;
+    left: 7vw;
+    margin-left: -20px;
+    z-index:2;
+}
+
+.tarnext {
+    height: 2vw;
+    width: auto;
+    position: absolute;
+    top: 40vh;
+    right: 4vw;
+    color: white;
+    z-index:2;
 }
 
 .detailsection {
