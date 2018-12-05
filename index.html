@@ -334,6 +334,22 @@
             transform: translate(0%,0%)
           }
         }
+        @keyframes movetopleftline {
+          0% {
+            transform: translate(-70%, 100%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
+        @-webkit-keyframes movetopleftline {
+          0% {
+            transform: translate(-70%, 100%)
+          }
+          100% {
+            transform: translate(0%,0%)
+          }
+        }
         @keyframes movebotright {
           0% {
             transform: translate(-50%, -50%)
@@ -389,43 +405,19 @@
           height: 100vh;
         }
         .line {
-          position: relative;
-          left: -115%;
-          width: 300%;
-          height: 1px;
-          background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-          -webkit-transform: rotate(-55deg); /* Safari and Chrome */
-              -ms-transform: rotate(-55deg); /* IE 9 */
-                  transform: rotate(-55deg);
-                  -webkit-animation: opcani 5s infinite  normal ease-out;
-                    animation: opacni 5s infinite  normal ease-out;
+          /* position: relative;
+          left: -115%; */
+          height:100vh;
+          /* background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+          -webkit-transform: rotate(-55deg);
+              -ms-transform: rotate(-55deg);
+                  transform: rotate(-55deg); */
+                  -webkit-animation: movetopleftline 2s infinite  normal ease-out;
+                    animation: movetopleftline 2s infinite  normal ease-out;
                     animation-iteration-count: 1;
         }
-        .line2 {
-          position: relative;
-          left: -112%;
-          width: 300%;
-          height: 1px;
-          background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-          -webkit-transform: rotate(-55deg); /* Safari and Chrome */
-              -ms-transform: rotate(-55deg); /* IE 9 */
-                  transform: rotate(-55deg);
-                  -webkit-animation: opcani 5s infinite  normal ease-out;
-                    animation: opacni 5s infinite  normal ease-out;
-                    animation-iteration-count: 1;
-        }
-        .line3 {
-          position: relative;
-          left: -109%;
-          width: 300%;
-          height: 1px;
-          background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-          -webkit-transform: rotate(-55deg); /* Safari and Chrome */
-              -ms-transform: rotate(-55deg); /* IE 9 */
-                  transform: rotate(-55deg);
-                  -webkit-animation: opcani 5s infinite  normal ease-out;
-                    animation: opacni 5s infinite  normal ease-out;
-                    animation-iteration-count: 1;
+        .line img {
+          height:100vh;
         }
         .title {
           color:white;
@@ -451,9 +443,9 @@
     </style>
     <div class="landcarousel owl-carousel">
       <div id="scene">
-        <div class="line">        </div>
-        <div class="line2">        </div>
-        <div class="line3">        </div>
+        <div class="line">
+          <img style="width:100vw;" src="lines.png" alt="">
+        </div>
         <div > <figure class="circle9">       </figure> </div>
         <div > <figure class="circle1">       </figure> </div>
         <div> <figure class="circle2">       </figure> </div>
